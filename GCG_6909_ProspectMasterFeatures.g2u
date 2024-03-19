@@ -1,0 +1,78 @@
+﻿Program.Sub.Preflight.Start
+v.Global.sError.Declare(String)
+v.Global.sARCID.Declare(String, "ARC 6909")
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Author: Arturo Almaguer
+'Date: 10/17/2022
+'Customer: Air Quality Engineering, quote number 11943
+'This program validates a couple of things requested by the customer.
+'This script is launched off the hooks shown below.
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	V.Local.sProspect.Declare(String)
+
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		
+		F.Intrinsic.Control.Case(29810)
+		'Prospect Master populate hook
+			
+			'Locking 'Order Notes' button.
+			F.Intrinsic.UI.ChangeCallerProperty(V.Passed.000028, "LOCK", 1)
+		
+'		F.Intrinsic.Control.Case(29850)
+'		'Prospect Master post-save hook
+'		
+'			F.Intrinsic.String.LPad(V.Passed.000002,"0",6,V.Local.sProspect)
+'			F.Intrinsic.Control.If(V.Caller.Switches, =, "N")
+'				
+'				'Validating if prospect contact exists
+'				F.ODBC.Connection!Con.OpenCompanyConnection
+'				F.Intrinsic.String.Build("select NAME from V_CONTACT where CUST = '{0}' and TYPE = 'P';", V.Local.sProspect, V.Local.sSQL)
+'				F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sSQL)
+'					
+'				F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, True)
+'				
+'					'Displaying msgbox
+'					F.Intrinsic.UI.Msgbox("No contact(s) were set up for this prospect. Please reopen prospect and click on 'Contacts' button to create the contact(s).", "ARC 6909")
+'						
+'				F.Intrinsic.Control.EndIf
+'				
+'			F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.EndSelect
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.CatchError.Start
+'To display the error
+F.Intrinsic.String.Build("Subroutine: {1}{0}Error Occurred {2} with description {3}", V.Ambient.Newline, V.Ambient.SubroutineCalledFrom, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Global.sError) 
+F.Intrinsic.UI.Msgbox(V.Global.sError, v.Global.sARCID)
+F.Intrinsic.Control.CallSub("Unload")
+Program.Sub.CatchError.End
+
+Program.Sub.Unload.Start
+'Closes the connection if it is open
+f.Intrinsic.Control.If(v.ODBC.con.exists,=,"1") 	
+    f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.EndIf
+
+'Ending program
+F.Intrinsic.Control.End
+Program.Sub.Unload.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8523.27591$}$1
+${$6$}$apadilla$}$20230529165611047$}$Lag9STqBJOmNXSbd5+msRcBWPGz0aFqSq3jmzPZEOBZaPA4d4UBTb/g58WBziaNcHtnaW2jLUtzhg10f3re0rw==
+Program.Sub.Comments.End
