@@ -1,0 +1,1204 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.FormLeads..Create(BaseForm)
+Gui.FormLeads..Caption("Lead Management Dashboard [6909]")
+Gui.FormLeads..Size(1425,859)
+Gui.FormLeads..MinX(0)
+Gui.FormLeads..MinY(0)
+Gui.FormLeads..Position(0,0)
+Gui.FormLeads..AlwaysOnTop(False)
+Gui.FormLeads..FontName("Tahoma")
+Gui.FormLeads..FontSize(8.25)
+Gui.FormLeads..ControlBox(True)
+Gui.FormLeads..MaxButton(True)
+Gui.FormLeads..MinButton(True)
+Gui.FormLeads..MousePointer(0)
+Gui.FormLeads..Moveable(True)
+Gui.FormLeads..Sizeable(True)
+Gui.FormLeads..ShowInTaskBar(True)
+Gui.FormLeads..TitleBar(True)
+Gui.FormLeads..Event(UnLoad,FormLeads_UnLoad)
+Gui.FormLeads.tab1.Create(Tab)
+Gui.FormLeads.tab1.Enabled(True)
+Gui.FormLeads.tab1.Visible(True)
+Gui.FormLeads.tab1.Zorder(0)
+Gui.FormLeads.tab1.Size(1392,777)
+Gui.FormLeads.tab1.Position(16,36)
+Gui.FormLeads.tab1.FontName("Tahoma")
+Gui.FormLeads.tab1.FontSize(8.25)
+Gui.FormLeads.tab1.Anchor(15)
+Gui.FormLeads.tab1.Tabs(2)
+Gui.FormLeads.tab1.SetTab(0)
+Gui.FormLeads.tab1.Caption("Active Leads")
+Gui.FormLeads.tab1.SetTab(1)
+Gui.FormLeads.tab1.Caption("History")
+Gui.FormLeads.gsgc_History.Create(GsGridControl)
+Gui.FormLeads.gsgc_History.Enabled(True)
+Gui.FormLeads.gsgc_History.Visible(True)
+Gui.FormLeads.gsgc_History.Zorder(0)
+Gui.FormLeads.gsgc_History.Size(1392,748)
+Gui.FormLeads.gsgc_History.Position(0,0)
+Gui.FormLeads.gsgc_History.Parent("tab1",1)
+Gui.FormLeads.gsgc_History.Anchor(15)
+Gui.FormLeads.gsgc_History.Event(CellValueChanged,gsgc_History_CellValueChanged)
+Gui.FormLeads.gsgc_History.Event(RowCellClick,gsgc_History_RowCellClick)
+Gui.FormLeads.gsgc_Active.Create(GsGridControl)
+Gui.FormLeads.gsgc_Active.Enabled(True)
+Gui.FormLeads.gsgc_Active.Visible(True)
+Gui.FormLeads.gsgc_Active.Zorder(0)
+Gui.FormLeads.gsgc_Active.Size(1392,748)
+Gui.FormLeads.gsgc_Active.Position(0,0)
+Gui.FormLeads.gsgc_Active.Parent("tab1",0)
+Gui.FormLeads.gsgc_Active.Anchor(15)
+Gui.FormLeads.gsgc_Active.Event(RowCellClick,gsgc_Active_RowCellClick)
+Gui.FormLeads.gsgc_Active.Event(CellValueChanged,gsgc_Active_CellValueChanged)
+Gui.FormLeads.cmdRefresh.Create(Button)
+Gui.FormLeads.cmdRefresh.Enabled(True)
+Gui.FormLeads.cmdRefresh.Visible(True)
+Gui.FormLeads.cmdRefresh.Zorder(0)
+Gui.FormLeads.cmdRefresh.Size(75,23)
+Gui.FormLeads.cmdRefresh.Position(1311,22)
+Gui.FormLeads.cmdRefresh.Caption("")
+Gui.FormLeads.cmdRefresh.FontName("Tahoma")
+Gui.FormLeads.cmdRefresh.FontSize(8.25)
+Gui.FormLeads.cmdRefresh.SvgPicture("icon_refresh_color")
+Gui.FormLeads.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.FormLeads.cmdRefresh.ImageAlign(8)
+Gui.FormLeads.cmdRefresh.Anchor(9)
+Gui.FormNotes..Create(BaseForm)
+Gui.FormNotes..Caption("Notes")
+Gui.FormNotes..Size(656,540)
+Gui.FormNotes..MinX(0)
+Gui.FormNotes..MinY(0)
+Gui.FormNotes..Position(0,0)
+Gui.FormNotes..AlwaysOnTop(False)
+Gui.FormNotes..FontName("Tahoma")
+Gui.FormNotes..FontSize(8.25)
+Gui.FormNotes..ControlBox(True)
+Gui.FormNotes..MaxButton(True)
+Gui.FormNotes..MinButton(True)
+Gui.FormNotes..MousePointer(0)
+Gui.FormNotes..Moveable(True)
+Gui.FormNotes..Sizeable(True)
+Gui.FormNotes..ShowInTaskBar(True)
+Gui.FormNotes..TitleBar(True)
+Gui.FormNotes..Event(UnLoad,FormNotes_UnLoad)
+Gui.FormNotes.txtNotes.Create(TextBoxR)
+Gui.FormNotes.txtNotes.Enabled(True)
+Gui.FormNotes.txtNotes.Visible(True)
+Gui.FormNotes.txtNotes.Zorder(0)
+Gui.FormNotes.txtNotes.Size(629,72)
+Gui.FormNotes.txtNotes.Position(12,64)
+Gui.FormNotes.txtNotes.FontName("Tahoma")
+Gui.FormNotes.txtNotes.FontSize(8.25)
+Gui.FormNotes.cmdNotesSave.Create(Button)
+Gui.FormNotes.cmdNotesSave.Enabled(True)
+Gui.FormNotes.cmdNotesSave.Visible(True)
+Gui.FormNotes.cmdNotesSave.Zorder(0)
+Gui.FormNotes.cmdNotesSave.Size(56,23)
+Gui.FormNotes.cmdNotesSave.Position(585,10)
+Gui.FormNotes.cmdNotesSave.Caption("")
+Gui.FormNotes.cmdNotesSave.FontName("Tahoma")
+Gui.FormNotes.cmdNotesSave.FontSize(8.25)
+Gui.FormNotes.cmdNotesSave.Event(Click,cmdNotesSave_Click)
+Gui.FormNotes.cmdNotesSave.SvgPicture("icon_save_all_color")
+Gui.FormNotes.cmdNotesSave.ImageAlign(8)
+Gui.FormNotes.cmdNotesSave.Anchor(9)
+Gui.FormNotes.lbl1.Create(Label,"Enter note:",True,55,13,0,12,46,True,0,"Tahoma",8.25,,0,0)
+Gui.FormNotes.lbl1.BorderStyle(0)
+Gui.FormNotes.lbl1.FontStyle(False,False,True,False,False)
+Gui.FormNotes.lbl2.Create(Label,"Prospect",True,50,13,0,12,16,True,0,"Tahoma",8.25,,0,0)
+Gui.FormNotes.lbl2.BorderStyle(0)
+Gui.FormNotes.lbl2.FontStyle(True,False,False,False,False)
+Gui.FormNotes.txtNote_Prospect.Create(TextBox,"",True,439,20,0,73,12,True,0,"Tahoma",8.25,,1)
+Gui.FormNotes.txtNote_Prospect.Locked(True)
+Gui.FormNotes.gsgcNotes.Create(GsGridControl)
+Gui.FormNotes.gsgcNotes.Enabled(True)
+Gui.FormNotes.gsgcNotes.Visible(True)
+Gui.FormNotes.gsgcNotes.Zorder(0)
+Gui.FormNotes.gsgcNotes.Size(629,342)
+Gui.FormNotes.gsgcNotes.Position(12,154)
+Gui.FormUpdate..Create(BaseForm)
+Gui.FormUpdate..Caption("Mass Update Sales Rep")
+Gui.FormUpdate..Size(419,148)
+Gui.FormUpdate..MinX(0)
+Gui.FormUpdate..MinY(0)
+Gui.FormUpdate..Position(0,0)
+Gui.FormUpdate..AlwaysOnTop(False)
+Gui.FormUpdate..FontName("Tahoma")
+Gui.FormUpdate..FontSize(8.25)
+Gui.FormUpdate..ControlBox(True)
+Gui.FormUpdate..MaxButton(True)
+Gui.FormUpdate..MinButton(True)
+Gui.FormUpdate..MousePointer(0)
+Gui.FormUpdate..Moveable(True)
+Gui.FormUpdate..Sizeable(True)
+Gui.FormUpdate..ShowInTaskBar(True)
+Gui.FormUpdate..TitleBar(True)
+Gui.FormUpdate..Event(UnLoad,FormUpdate_UnLoad)
+Gui.FormUpdate.txtNewSR.Create(TextBox,"",True,100,20,0,239,36,True,0,"Tahoma",8.25,,1)
+Gui.FormUpdate.txtNewSR.Locked(True)
+Gui.FormUpdate.cmdNewSR.Create(Button)
+Gui.FormUpdate.cmdNewSR.Enabled(True)
+Gui.FormUpdate.cmdNewSR.Visible(True)
+Gui.FormUpdate.cmdNewSR.Zorder(0)
+Gui.FormUpdate.cmdNewSR.Size(45,23)
+Gui.FormUpdate.cmdNewSR.Position(357,34)
+Gui.FormUpdate.cmdNewSR.Caption("")
+Gui.FormUpdate.cmdNewSR.FontName("Tahoma")
+Gui.FormUpdate.cmdNewSR.FontSize(8.25)
+Gui.FormUpdate.cmdNewSR.SvgPicture("icon_browser_color")
+Gui.FormUpdate.cmdNewSR.ImageAlign(8)
+Gui.FormUpdate.cmdNewSR.Event(Click,cmdNewSR_Click)
+Gui.FormUpdate.txtOldSR.Create(TextBox,"",True,100,20,0,23,36,True,0,"Tahoma",8.25,,1)
+Gui.FormUpdate.txtOldSR.Locked(True)
+Gui.FormUpdate.cmdOldSR.Create(Button)
+Gui.FormUpdate.cmdOldSR.Enabled(True)
+Gui.FormUpdate.cmdOldSR.Visible(True)
+Gui.FormUpdate.cmdOldSR.Zorder(0)
+Gui.FormUpdate.cmdOldSR.Size(43,23)
+Gui.FormUpdate.cmdOldSR.Position(142,34)
+Gui.FormUpdate.cmdOldSR.Caption("")
+Gui.FormUpdate.cmdOldSR.FontName("Tahoma")
+Gui.FormUpdate.cmdOldSR.FontSize(8.25)
+Gui.FormUpdate.cmdOldSR.SvgPicture("icon_browser_color")
+Gui.FormUpdate.cmdOldSR.ImageAlign(8)
+Gui.FormUpdate.cmdOldSR.Event(Click,cmdOldSR_Click)
+Gui.FormUpdate.lbl1.Create(Label,"Sales Rep to replace",True,115,13,0,23,16,True,0,"Tahoma",8.25,,0,0)
+Gui.FormUpdate.lbl1.BorderStyle(0)
+Gui.FormUpdate.lbl1.FontStyle(True,False,False,False,False)
+Gui.FormUpdate.lbl2.Create(Label,"New Sales Rep",True,81,13,0,239,16,True,0,"Tahoma",8.25,,0,0)
+Gui.FormUpdate.lbl2.BorderStyle(0)
+Gui.FormUpdate.lbl2.FontStyle(True,False,False,False,False)
+Gui.FormUpdate.cmdUpdateSave.Create(Button)
+Gui.FormUpdate.cmdUpdateSave.Enabled(True)
+Gui.FormUpdate.cmdUpdateSave.Visible(True)
+Gui.FormUpdate.cmdUpdateSave.Zorder(0)
+Gui.FormUpdate.cmdUpdateSave.Size(75,23)
+Gui.FormUpdate.cmdUpdateSave.Position(328,80)
+Gui.FormUpdate.cmdUpdateSave.Caption("")
+Gui.FormUpdate.cmdUpdateSave.FontName("Tahoma")
+Gui.FormUpdate.cmdUpdateSave.FontSize(8.25)
+Gui.FormUpdate.cmdUpdateSave.SvgPicture("icon_save_color")
+Gui.FormUpdate.cmdUpdateSave.ImageAlign(8)
+Gui.FormUpdate.cmdUpdateSave.Event(Click,cmdUpdateSave_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.bLoadData.Declare(Boolean)
+V.Global.sError.Declare(String)
+V.Global.iAltID.Declare(Long)
+V.Global.sProspectID.Declare(String)
+V.Global.sARCID.Declare(String, "ARC 6909")
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Author: Arturo Almaguer
+'Date: 9/22/22
+'Customer: Air Quality Engineering, quote: 11943
+'This program loads all existing prospects by Salesperson.
+'This script is fired off a new custom menu item created under CRM - File - Lead Management Dashboard [6909]
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+F.Intrinsic.Control.Try
+	
+	'Opening connection
+	F.ODBC.Connection!Con.OpenCompanyConnection
+	
+	'Calling subs to load grids
+	F.Intrinsic.Control.CallSub("LoadDtGvActive")
+	F.Intrinsic.Control.CallSub("ContextMenuActive")
+	
+	F.Intrinsic.Control.CallSub("LoadDtGvHistory")
+	F.Intrinsic.Control.CallSub("ContextMenuHistory")
+	
+	F.Intrinsic.Control.CallSub("Deserialize")
+	
+	'Showing form
+	GUI.FormLeads..Show
+	
+	'Setting active tab to be main by default
+	gui.FormLeads.tab1.SetTab(1)
+	gui.FormLeads.tab1.SetTab(0)
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.LoadDtGvActive.Start
+'This subroutine loads and formats the data in Active grid.
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	V.Local.bIsInGroup.Declare(Boolean)
+	V.Local.sSalesID.Declare(String)
+	V.Local.sUF2Options.Declare(String)
+	
+	'Closing dt if it already exists
+	F.Intrinsic.Control.If(V.DataTable.dtActiveLeads.Exists)
+		F.Data.DataTable.Close("dtActiveLeads")
+	F.Intrinsic.Control.EndIf
+	
+	'Updated requirement: All users will be able to see all entries.
+	V.Local.sSQL.Set("select RTRIM(PM.PROSPECT) PROSPECT, RTRIM(PM.NAME_PROSPECT) NAME_PROSPECT, RTRIM(PM.ADDRESS1) ADDRESS1, RTRIM(PM.ADDRESS2) ADDRESS2, RTRIM(PM.CITY) CITY, RTRIM(PM.STATE) STATE, RTRIM(PM.ZIP) ZIP, RTRIM(C.NAME) NAME, RTRIM(C.EMAIL1) EMAIL1, C.ALT_ID, RTRIM(PA.SALSM) SALSM, RTRIM(PA.NEW_CUST) NEW_CUST from V_PROSPECT_MASTER PM LEFT JOIN V_CONTACT C ON PM.PROSPECT = C.CUST LEFT JOIN V_PROSPECT_AUX PA ON PM.PROSPECT = PA.PROSPECT;")
+		
+	'Creating dt
+	F.Data.DataTable.CreateFromSQL("dtActiveLeads1", "Con", V.Local.sSQL, True)
+	
+	V.Global.bLoadData.Set(True)
+	
+	'Creating dict to get CRM UF1 value
+	F.Data.Dictionary.CreateFromSQL("dictUF1", "Con", "select CID, RTRIM(UF1) UF1 from CRM_UF_VALUE")
+	F.Data.Dictionary.SetDefaultReturn("dictUF1", "")
+	F.Data.DataTable.AddColumn("dtActiveLeads1", "USER_FIELD1", "String")
+	F.Data.DataTable.FillFromDictionary("dtActiveLeads1", "dictUF1", "ALT_ID", "USER_FIELD1")
+	F.Data.Dictionary.Close("dictUF1")
+	
+	'Creating dict to get CRM UF2 value
+	F.Data.Dictionary.CreateFromSQL("dictUF2", "Con", "select CID, RTRIM(UF2) UF2 from CRM_UF_VALUE")
+	F.Data.Dictionary.SetDefaultReturn("dictUF2", "")
+	F.Data.DataTable.AddColumn("dtActiveLeads1", "USER_FIELD2", "String")
+	F.Data.DataTable.FillFromDictionary("dtActiveLeads1", "dictUF2", "ALT_ID", "USER_FIELD2")
+	F.Data.Dictionary.Close("dictUF2")
+	
+	'Adding new NOTES column
+	F.Data.DataTable.AddColumn("dtActiveLeads1", "NOTES", "String")
+	
+	'Creating dv to get final dt
+	F.Data.DataView.Create("dtActiveLeads1", "dvActiveLeads1", 22, "[USER_FIELD2] <> 'Archive'", "")
+	F.Data.DataView.ToDataTable("dtActiveLeads1", "dvActiveLeads1", "dtActiveLeads", True)
+	F.Data.DataView.Close("dtActiveLeads1", "dvActiveLeads1")
+	f.Data.DataTable.Close("dtActiveLeads1")
+	
+	'Setting gv
+	GUI.FormLeads.gsgc_Active.AddGridviewFromDatatable("gvActiveLeads", "dtActiveLeads")
+	
+	''General Gridview properties
+	GUI.FormLeads.gsgc_Active.SetGridviewProperty("gvActiveLeads", V.Enum.GridViewPropertyNames!EnableAppearanceOddRow, True)
+	GUI.FormLeads.gsgc_Active.SetGridviewProperty("gvActiveLeads", V.Enum.GridViewPropertyNames!RowAutoHeight, True)
+	GUI.FormLeads.gsgc_Active.SetGridviewProperty("gvActiveLeads", V.Enum.GridViewPropertyNames!ColumnPanelRowHeight, 45)
+	GUI.FormLeads.gsgc_Active.SetGridviewProperty("gvActiveLeads", V.Enum.GridViewPropertyNames!EnableAppearanceFocusedRow, True) 
+	GUI.FormLeads.gsgc_Active.SetGridviewProperty("gvActiveLeads", V.Enum.GridViewPropertyNames!ShowAutoFilterRow, True) 
+	GUI.FormLeads.gsgc_Active.SetGridviewProperty("gvActiveLeads", "OptionsViewColumnAutoWidth", False) 'It allows the user to adjust the column widths
+	
+	'Invisible columns
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ALT_ID", V.Enum.ColumnPropertyNames!Visible, False)
+	
+	'Formatting captions
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!Caption, "ID")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!Caption, "Prospect Name")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!Caption, "Address Line 1")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!Caption, "Address Line 2")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "CITY", V.Enum.ColumnPropertyNames!Caption, "City")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "STATE", V.Enum.ColumnPropertyNames!Caption, "State")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ZIP", V.Enum.ColumnPropertyNames!Caption, "ZIP")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME", V.Enum.ColumnPropertyNames!Caption, "Contact Name")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "EMAIL1", V.Enum.ColumnPropertyNames!Caption, "Contact Email")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "SALSM", V.Enum.ColumnPropertyNames!Caption, "Sales Rep")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!Caption, "Creation Date")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!Caption, "Source")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!Caption, "Status")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!Caption, "Notes")
+	
+	'Formatting headers
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "CITY", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "STATE", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ZIP", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "EMAIL1", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "SALSM", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	'Formatting headers allignment
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "CITY", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "STATE", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ZIP", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "EMAIL1", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "SALSM", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	'Formatting columns width
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!MinWidth, 80)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!MinWidth, 180)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!MinWidth, 220)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!MinWidth, 220)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "CITY", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "STATE", V.Enum.ColumnPropertyNames!MinWidth, 80)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "ZIP", V.Enum.ColumnPropertyNames!MinWidth, 80)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NAME", V.Enum.ColumnPropertyNames!MinWidth, 150)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "EMAIL1", V.Enum.ColumnPropertyNames!MinWidth, 180)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "SALSM", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!MinWidth, 120)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	
+	'Formatting date columns to show only date
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!DisplayCustomDateTime, "d")
+	
+	'Making USER_FIELD2 a dropdown list type of column and retrieving values from CRM User Field 2
+	F.ODBC.Connection!Con.ExecuteAndReturn("select RTRIM(UF_VALUE) UF_VALUE from CRM_UF_DEFAULT where TYPE = '12' and UF_NO = '2'", V.Local.sUF2Options)
+	F.Intrinsic.String.Replace(V.Local.sUF2Options,"#$#", "*!*", V.Local.sUF2Options)
+	GUI.FormLeads.gsgc_Active.ColumnEdit("gvActiveLeads", "USER_FIELD2", "Dropdownlist", V.Local.sUF2Options)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!ReadOnly, False)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!AllowEdit, True)
+	
+	'Formatting NOTES column to display a button
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!ReadOnly, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!AllowEdit, False)
+	GUI.FormLeads.gsgc_Active.ColumnEdit("gvActiveLeads", "NOTES", "EditorButton", "Notes")
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "NOTES", V.Enum.ColumnPropertyNames!CellBackColor, "LightYellow")
+	
+	'Formatting PROSPECT ID column to be a hyperlink to Prospects Edit Master screen
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!IsHyperlink, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!ReadOnly, True)
+	GUI.FormLeads.gsgc_Active.SetColumnProperty("gvActiveLeads", "PROSPECT", V.Enum.ColumnPropertyNames!AllowEdit, False)
+	
+	'Displaying gv
+	GUI.FormLeads.gsgc_Active.MainView("gvActiveLeads")
+	GUI.FormLeads.gsgc_Active.Visible(True)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtGvActive.End
+
+Program.Sub.ContextMenuActive.Start
+'This subroutine creates Active context menu and its items
+
+F.Intrinsic.Control.Try
+	
+	V.Local.bIsInGroup.Declare(Boolean)
+
+	GUI.FormLeads..ContextMenuCreate("ctxgsgcActive")
+	GUI.FormLeads.gsgc_Active.ContextMenuAttach("ctxgsgcActive")
+	GUI.FormLeads..ContextMenuAddItem("ctxgsgcActive","Export",0,"Export")
+	GUI.FormLeads..ContextMenuAddItem("ctxgsgcActive","ResetColumns",0,"Reset Columns")
+	GUI.FormLeads..ContextMenuAddItem("ctxgsgcActive","CreateLead",0,"Create Lead")
+	
+	GUI.FormLeads..ContextMenuSetItemEventHandler("ctxgsgcActive","Export","MenuClickExport_A")
+	GUI.FormLeads..ContextMenuSetItemEventHandler("ctxgsgcActive","ResetColumns","MenuClickResetColumns_A")
+	GUI.FormLeads..ContextMenuSetItemEventHandler("ctxgsgcActive","CreateLead","MenuClickCreateLead_A")
+	
+	'Adding menu item to allow just admin users to reassign prospects to another sales rep.LEADSMGR
+	F.Global.Security.IsInGroup(V.Caller.User, "LEADSMGR", V.Caller.CompanyCode, V.Local.bIsInGroup)
+	F.Intrinsic.Control.If(V.Local.bIsInGroup,=,True)
+		GUI.FormLeads..ContextMenuAddItem("ctxgsgcActive","MassUpdateSP",0,"Mass Update Sales Rep")
+		GUI.FormLeads..ContextMenuSetItemEventHandler("ctxgsgcActive","MassUpdateSP","MenuClickMassUpdateSP_A")
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.ContextMenuActive.End
+
+Program.Sub.MenuClickExport_A.Start
+'This subroutine exports Active grid to excel file or csv if Excel isn't installed
+
+F.Intrinsic.Control.Try
+
+	V.Local.sFileExport.Declare(String)
+	V.Local.bExcel.Declare(String)
+	V.Local.sFilePath.Declare(String)
+	
+	F.Intrinsic.UI.FolderBrowser("Select the path where file will be exported to:", "", V.Local.sFilePath)
+	F.Intrinsic.Control.If(V.Local.sFilePath.IsNotCancel)
+		
+		F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+		F.Intrinsic.Control.If(V.Local.bExcel, =, True)
+			F.Intrinsic.String.Build("{0}\Lead Management Dashboard_Active.xlsx", V.Local.sFilePath, V.Local.sFileExport)
+			GUI.FormLeads.gsgc_Active.Export(V.Local.sFileExport,"xlsx")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}\Lead Management Dashboard_Active.csv", V.Local.sFilePath, V.Local.sFileExport)
+			GUI.FormLeads.gsgc_Active.Export(V.Local.sFileExport,"csv")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Else
+			
+		'Displaying error message
+		F.Intrinsic.UI.Msgbox("An export path must be selected to export dashboard.", V.Global.sARCID)
+		
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickExport_A.End
+
+Program.Sub.MenuClickResetColumns_A.Start
+'This subroutine reset the Active grid's view
+
+F.Intrinsic.Control.Try
+
+	F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode,"gvActiveLeads", 6909,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+	
+	'Prevent RefreshScreen from doing Serialize.
+	V.Global.bLoadData.Set(False)
+	
+	F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickResetColumns_A.End
+
+Program.Sub.MenuClickMassUpdateSP_A.Start
+'This subroutine reset the Active grid's view
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+
+	'Disabling mainview
+	GUI.FormLeads..Enabled(False)
+	GUI.FormUpdate..Show		
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickMassUpdateSP_A.End
+
+Program.Sub.Serialize.Start
+F.Intrinsic.Control.Try
+
+	V.Local.sSerialize.Declare(String)
+	
+	'For gvActiveLeads
+	GUI.FormLeads.gsgc_Active.Serialize("gvActiveLeads", V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode,"gvActiveLeads", 6909,1001,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM, V.Local.sSerialize)
+
+	'For gvHistoryLeads
+	GUI.FormLeads.gsgc_History.Serialize("gvHistoryLeads", V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode,"gvHistoryLeads", 6909,1001,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM, V.Local.sSerialize)
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+F.Intrinsic.Control.Try
+
+V.Local.sSerialize.Declare(String)
+
+	'For gvActiveLeads
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvActiveLeads",6909,1001,6,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		GUI.FormLeads.gsgc_Active.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+	'For gvHistoryLeads
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvHistoryLeads",6909,1001,6,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		GUI.FormLeads.gsgc_History.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.FormLeads_UnLoad.Start
+F.Intrinsic.Control.If(V.Global.bLoadData)
+	F.Intrinsic.Control.CallSub(Serialize)
+F.Intrinsic.Control.EndIf
+
+'Closing the connection if it is open
+f.Intrinsic.Control.If(v.ODBC.con.exists,=,"1") 	
+    f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.EndIf
+
+'Closing screen
+GUI.FormLeads..Visible(False)
+
+'Ending program
+F.Intrinsic.Control.End
+Program.Sub.FormLeads_UnLoad.End
+
+Program.Sub.cmdRefresh_Click.Start
+'This subroutine re-loads the data when refreshed.
+
+F.Intrinsic.Control.Try
+	
+	F.Intrinsic.Control.If(V.Global.bLoadData)
+		F.Intrinsic.Control.CallSub(Serialize)
+	F.Intrinsic.Control.EndIf
+	
+	'Making both grids invisible, then refresh
+	GUI.FormLeads..Visible(False)
+	GUI.FormLeads.gsgc_Active.Visible(False)
+	GUI.FormLeads.gsgc_Active.SuspendLayout
+	GUI.FormLeads.gsgc_History.Visible(False)
+	GUI.FormLeads.gsgc_History.SuspendLayout
+	
+	'Calling subs to re-load data
+	F.Intrinsic.Control.CallSub("LoadDtGvActive")
+	F.Intrinsic.Control.CallSub("LoadDtGvHistory")
+	F.Intrinsic.Control.CallSub("Deserialize")
+	
+	'Making both grids visible again
+	GUI.FormLeads.gsgc_History.ResumeLayout
+	GUI.FormLeads.gsgc_History.Visible(True)
+	GUI.FormLeads.gsgc_Active.ResumeLayout
+	GUI.FormLeads.gsgc_Active.Visible(True)
+	GUI.FormLeads..Visible(True)
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.MenuClickCreateLead_A.Start
+'This subroutine opens the prospect new screen to allow user to create new prospect/lead.
+
+F.Intrinsic.Control.Try
+
+	V.Local.sParameters.Declare(String)
+	
+	'Disabling mainview
+	GUI.FormLeads..Enabled(False)
+			
+	'Setting parameters and calling callwrapper
+	F.Intrinsic.String.ConcatCallWrapperArgs("N", "P", "", V.Local.sParameters)	
+	F.Global.General.CallWrapperSync(100000, V.Local.sParameters)
+	
+	'Enabling mainview and refreshing grid
+	GUI.FormLeads..Enabled(True)
+	F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickCreateLead_A.End
+
+Program.Sub.gsgc_Active_RowCellClick.Start
+'This subroutine shows Notes form when user clicks on Notes column
+
+F.Intrinsic.Control.Try
+	
+	V.Local.sProspect.Declare(String)
+	V.Local.sParameters.Declare(String)
+	V.Local.sProspectID.Declare(String)
+
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+	
+		F.Intrinsic.Control.Case("NOTES")
+			
+			'Disabling mainview
+			GUI.FormLeads..Enabled(False)
+			
+			'Getting Prsopect ID, ALT_ID and displaying Notes form
+			GUI.FormLeads.gsgc_Active.GetCellValueByColumnName("gvActiveLeads", "ALT_ID", V.Args.RowIndex, V.Global.iAltID)
+			GUI.FormLeads.gsgc_Active.GetCellValueByColumnName("gvActiveLeads", "PROSPECT", V.Args.RowIndex, V.Global.sProspectID)
+			GUI.FormLeads.gsgc_Active.GetCellValueByColumnName("gvActiveLeads", "NAME_PROSPECT", V.Args.RowIndex, V.Local.sProspect)
+			
+			GUI.FormNotes.txtNote_Prospect.Text(V.Local.sProspect)
+			F.Intrinsic.Control.CallSub("LoadDtGvNotes")
+			GUI.FormNotes..Show		
+	
+		F.Intrinsic.Control.Case("PROSPECT")
+			
+			'Disabling mainview
+			GUI.FormLeads..Enabled(False)
+			
+			'Setting parameters and calling callwrapper
+			GUI.FormLeads.gsgc_Active.GetCellValueByColumnName("gvActiveLeads", "PROSPECT", V.Args.RowIndex, V.Local.sProspectID)
+			F.Intrinsic.String.ConcatCallWrapperArgs("O", "P", V.Local.sProspectID, V.Local.sParameters)	
+			F.Global.General.CallWrapperSync(100000, V.Local.sParameters)
+			
+			'Enabling mainview and refreshing grid
+			GUI.FormLeads..Enabled(True)
+			F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+	
+	F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgc_Active_RowCellClick.End
+
+Program.Sub.FormNotes_UnLoad.Start
+'Making form invisible and setting focus to mainview
+GUI.FormNotes..Visible(False)
+GUI.FormLeads..SetFocus
+GUI.FormLeads..Enabled(True)
+Program.Sub.FormNotes_UnLoad.End
+
+Program.Sub.gsgc_Active_CellValueChanged.Start
+'This subroutine updates Status value on CRM UF2.
+
+F.Intrinsic.Control.Try
+
+	V.Local.iAltID.Declare(Long)
+	V.Local.sSQL.Declare(String)
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+	
+		F.Intrinsic.Control.Case("USER_FIELD2")
+			
+			'Getting Alt Id
+			GUI.FormLeads.gsgc_Active.GetCellValueByColumnName("gvActiveLeads", "ALT_ID", V.Args.RowIndex, V.Local.iAltID)
+	
+			'Updating value
+			F.Intrinsic.String.Build("update CRM_UF_VALUE set UF2 = '{1}' where TYPE = '12' and CID = '{0}';", V.Local.iAltID, v.Args.Value, V.Local.sSQL)
+			F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+			
+			'Refreshing grid when value is Archive.
+			F.Intrinsic.Control.If(v.Args.Value,=,"Archive")
+				F.Intrinsic.Control.CallSub("cmdRefresh_Click")
+			F.Intrinsic.Control.EndIf
+			
+	F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgc_Active_CellValueChanged.End
+
+Program.Sub.LoadDtGvHistory.Start
+'This subroutine loads and formats the data in History grid.
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	V.Local.bIsInGroup.Declare(Boolean)
+	V.Local.sSalesID.Declare(String)
+	V.Local.sUF2Options.Declare(String)
+	
+	'Closing dt if it already exists
+	F.Intrinsic.Control.If(V.DataTable.dtHistoryLeads.Exists)
+		F.Data.DataTable.Close("dtHistoryLeads")
+	F.Intrinsic.Control.EndIf
+	
+'	'Checking if user is part of LEADSMGR group. If it is, user has admin access and will see all entries regardless of salesperson. If it isnt, user will see only their own records. 
+'	'Customer's admin group name: LEADSMGR
+'	F.Global.Security.IsInGroup(V.Caller.User, "1", V.Caller.CompanyCode, V.Local.bIsInGroup)
+'	F.Intrinsic.Control.If(V.Local.bIsInGroup,=,True)
+'	
+'		'Admin access = see all entries in dashboard
+'		V.Local.sSQL.Set("select RTRIM(PM.PROSPECT) PROSPECT, RTRIM(PM.NAME_PROSPECT) NAME_PROSPECT, RTRIM(PM.ADDRESS1) ADDRESS1, RTRIM(PM.ADDRESS2) ADDRESS2, RTRIM(PM.CITY) CITY, RTRIM(PM.STATE) STATE, RTRIM(PM.ZIP) ZIP, RTRIM(C.NAME) NAME, RTRIM(C.EMAIL1) EMAIL1, C.ALT_ID, RTRIM(PA.SALSM) SALSM, RTRIM(PA.NEW_CUST) NEW_CUST from V_PROSPECT_MASTER PM LEFT JOIN V_CONTACT C ON PM.PROSPECT = C.CUST LEFT JOIN V_PROSPECT_AUX PA ON PM.PROSPECT = PA.PROSPECT;")
+'		
+'	F.Intrinsic.Control.Else
+'		
+'		'Display records based on GS User
+'		'F.Intrinsic.String.Build("select S.ID from V_SALESPERSONS S LEFT JOIN GLOBALCOMMON.USER_INFORMATION UI ON UCASE(replace(S.NAME, ' ', '')) = UCASE(concat(UI.FIRST_NAME,UI.LAST_NAME)) where UI.GS_USER = '{0}'", V.Caller.User, V.Local.sSQL)
+'		F.Intrinsic.String.Build("select S.ID from V_SALESPERSONS S LEFT JOIN GLOBALCOMMON.USER_INFORMATION UI ON UCASE(S.NAME) = UCASE(UI.FIRST_NAME + ' ' + UI.LAST_NAME) where UI.GS_USER = '{0}'", V.Caller.User, V.Local.sSQL)
+'		f.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sSalesID)
+'		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, False)
+'	
+'			F.Intrinsic.String.Build("select PM.PROSPECT, PM.NAME_PROSPECT, PM.ADDRESS1, PM.ADDRESS2, PM.CITY, PM.STATE, PM.ZIP, C.NAME, C.EMAIL1, C.ALT_ID, PA.SALSM, PA.NEW_CUST from V_PROSPECT_MASTER PM LEFT JOIN V_CONTACT C ON PM.PROSPECT = C.CUST LEFT JOIN V_PROSPECT_AUX PA ON PM.PROSPECT = PA.PROSPECT where PA.SALSM = '{0}';",  V.Local.sSalesID, V.Local.sSQL)
+'			
+'		f.Intrinsic.Control.Else
+'			
+'			'Displaying error since user is neither admin nor a salesperson.
+'			F.Intrinsic.UI.Msgbox("User is neither admin nor a salesperson. Closing dashboard.", "ERROR")
+'			F.Intrinsic.Control.CallSub("FormLeads_UnLoad")
+'			
+'		F.Intrinsic.Control.EndIf
+'	
+'	F.Intrinsic.Control.EndIf
+	
+	'Updated requirement: All users will be able to see all entries.
+	V.Local.sSQL.Set("select RTRIM(PM.PROSPECT) PROSPECT, RTRIM(PM.NAME_PROSPECT) NAME_PROSPECT, RTRIM(PM.ADDRESS1) ADDRESS1, RTRIM(PM.ADDRESS2) ADDRESS2, RTRIM(PM.CITY) CITY, RTRIM(PM.STATE) STATE, RTRIM(PM.ZIP) ZIP, RTRIM(C.NAME) NAME, RTRIM(C.EMAIL1) EMAIL1, C.ALT_ID, RTRIM(PA.SALSM) SALSM, RTRIM(PA.NEW_CUST) NEW_CUST from V_PROSPECT_MASTER PM LEFT JOIN V_CONTACT C ON PM.PROSPECT = C.CUST LEFT JOIN V_PROSPECT_AUX PA ON PM.PROSPECT = PA.PROSPECT;")
+			
+	'Creating dt
+	F.Data.DataTable.CreateFromSQL("dtHistoryLeads1", "Con", V.Local.sSQL, True)
+	
+	'Creating dict to get CRM UF1 value
+	F.Data.Dictionary.CreateFromSQL("dictUF1", "Con", "select CID, RTRIM(UF1) UF1 from CRM_UF_VALUE")
+	F.Data.Dictionary.SetDefaultReturn("dictUF1", "")
+	F.Data.DataTable.AddColumn("dtHistoryLeads1", "USER_FIELD1", "String")
+	F.Data.DataTable.FillFromDictionary("dtHistoryLeads1", "dictUF1", "ALT_ID", "USER_FIELD1")
+	F.Data.Dictionary.Close("dictUF1")
+	
+	'Creating dict to get CRM UF2 value
+	F.Data.Dictionary.CreateFromSQL("dictUF2", "Con", "select CID, RTRIM(UF2) UF2 from CRM_UF_VALUE")
+	F.Data.Dictionary.SetDefaultReturn("dictUF2", "")
+	F.Data.DataTable.AddColumn("dtHistoryLeads1", "USER_FIELD2", "String")
+	F.Data.DataTable.FillFromDictionary("dtHistoryLeads1", "dictUF2", "ALT_ID", "USER_FIELD2")
+	F.Data.Dictionary.Close("dictUF2")
+	
+	'Adding new NOTES column
+	F.Data.DataTable.AddColumn("dtHistoryLeads1", "NOTES", "String")
+	
+	'Creating dv to get final dt
+	F.Data.DataView.Create("dtHistoryLeads1", "dvHistoryLeads1", 22, "[USER_FIELD2] = 'Archive'", "")
+	F.Data.DataView.ToDataTable("dtHistoryLeads1", "dvHistoryLeads1", "dtHistoryLeads", True)
+	F.Data.DataView.Close("dtHistoryLeads1", "dvHistoryLeads1")
+	f.Data.DataTable.Close("dtHistoryLeads1")
+	
+	'Setting gv
+	GUI.FormLeads.gsgc_History.AddGridviewFromDatatable("gvHistoryLeads", "dtHistoryLeads")
+	
+	''General Gridview properties
+	GUI.FormLeads.gsgc_History.SetGridviewProperty("gvHistoryLeads", V.Enum.GridViewPropertyNames!EnableAppearanceOddRow, True)
+	GUI.FormLeads.gsgc_History.SetGridviewProperty("gvHistoryLeads", V.Enum.GridViewPropertyNames!RowAutoHeight, True)
+	GUI.FormLeads.gsgc_History.SetGridviewProperty("gvHistoryLeads", V.Enum.GridViewPropertyNames!ColumnPanelRowHeight, 45)
+	GUI.FormLeads.gsgc_History.SetGridviewProperty("gvHistoryLeads", V.Enum.GridViewPropertyNames!EnableAppearanceFocusedRow, True) 
+	GUI.FormLeads.gsgc_History.SetGridviewProperty("gvHistoryLeads", V.Enum.GridViewPropertyNames!ShowAutoFilterRow, True) 
+	GUI.FormLeads.gsgc_History.SetGridviewProperty("gvHistoryLeads", "OptionsViewColumnAutoWidth", False) 'It allows the user to adjust the column widths
+	
+	'Invisible columns
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ALT_ID", V.Enum.ColumnPropertyNames!Visible, False)
+	
+	'Formatting captions
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "PROSPECT", V.Enum.ColumnPropertyNames!Caption, "ID")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!Caption, "Prospect Name")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!Caption, "Address Line 1")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!Caption, "Address Line 2")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "CITY", V.Enum.ColumnPropertyNames!Caption, "City")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "STATE", V.Enum.ColumnPropertyNames!Caption, "State")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ZIP", V.Enum.ColumnPropertyNames!Caption, "ZIP")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME", V.Enum.ColumnPropertyNames!Caption, "Contact Name")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "EMAIL1", V.Enum.ColumnPropertyNames!Caption, "Contact Email")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "SALSM", V.Enum.ColumnPropertyNames!Caption, "Sales Rep")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!Caption, "Creation Date")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!Caption, "Source")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!Caption, "Status")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!Caption, "Notes")
+	
+	'Formatting headers
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "PROSPECT", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "CITY", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "STATE", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ZIP", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "EMAIL1", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "SALSM", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	'Formatting headers allignment
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "PROSPECT", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "CITY", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "STATE", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ZIP", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "EMAIL1", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "SALSM", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	'Formatting columns width
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "PROSPECT", V.Enum.ColumnPropertyNames!MinWidth, 80)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME_PROSPECT", V.Enum.ColumnPropertyNames!MinWidth, 180)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS1", V.Enum.ColumnPropertyNames!MinWidth, 220)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ADDRESS2", V.Enum.ColumnPropertyNames!MinWidth, 220)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "CITY", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "STATE", V.Enum.ColumnPropertyNames!MinWidth, 80)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "ZIP", V.Enum.ColumnPropertyNames!MinWidth, 80)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NAME", V.Enum.ColumnPropertyNames!MinWidth, 150)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "EMAIL1", V.Enum.ColumnPropertyNames!MinWidth, 180)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "SALSM", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD1", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!MinWidth, 120)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!MinWidth, 100)
+	
+	'Formatting date columns to show only date
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NEW_CUST", V.Enum.ColumnPropertyNames!DisplayCustomDateTime, "d")
+	
+	'Making USER_FIELD2 a dropdown list type of column and retrieving values from CRM User Field 2
+	F.ODBC.Connection!Con.ExecuteAndReturn("select RTRIM(UF_VALUE) UF_VALUE from CRM_UF_DEFAULT where TYPE = '12' and UF_NO = '2'", V.Local.sUF2Options)
+	F.Intrinsic.String.Replace(V.Local.sUF2Options,"#$#", "*!*", V.Local.sUF2Options)
+	GUI.FormLeads.gsgc_History.ColumnEdit("gvHistoryLeads", "USER_FIELD2", "Dropdownlist", V.Local.sUF2Options)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!ReadOnly, False)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "USER_FIELD2", V.Enum.ColumnPropertyNames!AllowEdit, True)
+	
+	'Formatting NOTES column to display a button
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!ReadOnly, True)
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!AllowEdit, False)
+	GUI.FormLeads.gsgc_History.ColumnEdit("gvHistoryLeads", "NOTES", "EditorButton", "Notes")
+	GUI.FormLeads.gsgc_History.SetColumnProperty("gvHistoryLeads", "NOTES", V.Enum.ColumnPropertyNames!CellBackColor, "LightYellow")
+	
+	'Displaying gv
+	GUI.FormLeads.gsgc_History.MainView("gvHistoryLeads")
+	GUI.FormLeads.gsgc_History.Visible(True)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtGvHistory.End
+
+Program.Sub.ContextMenuHistory.Start
+'This subroutine creates History context menu and its items
+
+F.Intrinsic.Control.Try
+
+	GUI.FormLeads..ContextMenuCreate("ctxgsgcHistory")
+	GUI.FormLeads.gsgc_History.ContextMenuAttach("ctxgsgcHistory")
+	GUI.FormLeads..ContextMenuAddItem("ctxgsgcHistory","Export",0,"Export")
+	GUI.FormLeads..ContextMenuAddItem("ctxgsgcHistory","ResetColumns",0,"Reset Columns")
+	
+	GUI.FormLeads..ContextMenuSetItemEventHandler("ctxgsgcHistory","Export","MenuClickExport_H")
+	GUI.FormLeads..ContextMenuSetItemEventHandler("ctxgsgcHistory","ResetColumns","MenuClickResetColumns_H")
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.ContextMenuHistory.End
+
+Program.Sub.MenuClickExport_H.Start
+'This subroutine exports History grid to excel file or csv if Excel isn't installed
+
+	F.Intrinsic.Control.Try
+	
+	V.Local.sFileExport.Declare(String)
+	V.Local.bExcel.Declare(String)
+	V.Local.sFilePath.Declare(String)
+	
+	F.Intrinsic.UI.FolderBrowser("Select the path where file will be exported to:", "", V.Local.sFilePath)
+	F.Intrinsic.Control.If(V.Local.sFilePath.IsNotCancel)
+		
+		F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+		F.Intrinsic.Control.If(V.Local.bExcel, =, True)
+			F.Intrinsic.String.Build("{0}\Lead Management Dashboard_History.xlsx", V.Local.sFilePath, V.Local.sFileExport)
+			GUI.FormLeads.gsgc_History.Export(V.Local.sFileExport,"xlsx")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}\Lead Management Dashboard_History.csv", V.Local.sFilePath, V.Local.sFileExport)
+			GUI.FormLeads.gsgc_History.Export(V.Local.sFileExport,"csv")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Else
+			
+		'Displaying error message
+		F.Intrinsic.UI.Msgbox("An export path must be selected to export dashboard.", V.Global.sARCID)
+		
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickExport_H.End
+
+Program.Sub.MenuClickResetColumns_H.Start
+'This subroutine reset the History grid's view
+
+F.Intrinsic.Control.Try
+
+	F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode,"gvHistoryLeads", 6909,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+	
+	'Prevent RefreshScreen from doing Serialize.
+	V.Global.bLoadData.Set(False)
+	
+	F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickResetColumns_H.End
+
+Program.Sub.gsgc_History_CellValueChanged.Start
+'This subroutine updates Status value on CRM UF2.
+
+F.Intrinsic.Control.Try
+
+	V.Local.iAltID.Declare(Long)
+	V.Local.sSQL.Declare(String)
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+	
+		F.Intrinsic.Control.Case("USER_FIELD2")
+			
+			'Getting Alt Id
+			GUI.FormLeads.gsgc_History.GetCellValueByColumnName("gvHistoryLeads", "ALT_ID", V.Args.RowIndex, V.Local.iAltID)
+	
+			'Updating value and refreshing grid
+			F.Intrinsic.String.Build("update CRM_UF_VALUE set UF2 = '{1}' where TYPE = '12' and CID = '{0}';", V.Local.iAltID, v.Args.Value, V.Local.sSQL)
+			F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+			F.Intrinsic.Control.CallSub("cmdRefresh_Click")
+			
+	F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgc_History_CellValueChanged.End
+
+Program.Sub.gsgc_History_RowCellClick.Start
+'This subroutine shows Notes form when user clicks on Notes column
+
+F.Intrinsic.Control.Try
+
+	V.Local.sProspect.Declare(String)
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+	
+		F.Intrinsic.Control.Case("NOTES")
+			
+			'Disabling mainview
+			GUI.FormLeads..Enabled(False)
+			
+			'Getting Prsopect ID, ALT_ID and displaying Notes form
+			GUI.FormLeads.gsgc_History.GetCellValueByColumnName("gvHistoryLeads", "ALT_ID", V.Args.RowIndex, V.Global.iAltID)
+			GUI.FormLeads.gsgc_History.GetCellValueByColumnName("gvHistoryLeads", "PROSPECT", V.Args.RowIndex, V.Global.sProspectID)
+			GUI.FormLeads.gsgc_History.GetCellValueByColumnName("gvHistoryLeads", "NAME_PROSPECT", V.Args.RowIndex, V.Local.sProspect)
+			
+			GUI.FormNotes.txtNote_Prospect.Text(V.Local.sProspect)
+			F.Intrinsic.Control.CallSub("LoadDtGvNotes")
+			GUI.FormNotes..Show		
+	
+	F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgc_History_RowCellClick.End
+
+Program.Sub.CatchError.Start
+'To display the error
+F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.SubroutineCalledFrom, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError) 
+F.Intrinsic.UI.Msgbox(V.Global.sError)
+F.Intrinsic.Control.CallSub("FormLeads_UnLoad")
+Program.Sub.CatchError.End
+
+Program.Sub.cmdNotesSave_Click.Start
+'This subroutine creates a prospect note
+
+F.Intrinsic.Control.Try
+
+	V.Local.sNote.Declare(String)
+	V.Local.iNID.Declare(Long)
+	V.Local.sSQL.Declare(String)
+	V.Local.sDateTime.Declare(String)
+	
+	V.Local.sNote.Set(V.Screen.FormNotes!txtNotes.Text)
+	F.Intrinsic.String.Format(V.Ambient.Now, "YYYY-MM-DD HH:NN:SS", V.Local.sDateTime)
+	
+	'Getting last NID and adding 1
+	F.ODBC.Connection!Con.ExecuteAndReturn("select top 1 NID from CRM_NOTES_COMBINED order by NID desc;", V.Local.iNID)
+	F.Intrinsic.Math.Add(V.Local.iNID, 1, V.Local.iNID)
+	
+	'Customer=15, Prospect=18, Vendor=10, Suspect=19, Contact=12, Opportunity=92
+	'Inserting prospect note
+	F.Intrinsic.String.Build("insert into CRM_NOTES_COMBINED (NID, NTYPE, COMPID, COMPTYPE, CID, OID, NOTE_DATETIME, LAST_CHG_DATETIME, LAST_CHG_PGM, LAST_CHG_BY, CMPNID, NOTES) values('{0}','1','{1}','18', '{2}','','{3}','{3}','GCG_6909','{4}','','{5}');", V.Local.iNID, V.Global.sProspectID, v.Global.iAltID, V.Local.sDateTime, V.Caller.User, V.Local.sNote, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	'Displaying msgbox and refreshing grid.
+	F.Intrinsic.UI.Msgbox("Note has been successfully saved.", V.Global.sARCID)
+	GUI.FormNotes.txtNotes.Text("")
+	F.Intrinsic.Control.CallSub("LoadDtGvNotes")
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdNotesSave_Click.End
+
+Program.Sub.LoadDtGvNotes.Start
+'This subroutine loads and formats the data in Notes grid.
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	
+	'Closing dt if it already exists
+	F.Intrinsic.Control.If(V.DataTable.dtNotes.Exists)
+		F.Data.DataTable.Close("dtNotes")
+	F.Intrinsic.Control.EndIf
+	
+	'Creating dt
+	F.Intrinsic.String.Build("select NOTE_DATETIME, NOTES from CRM_NOTES_COMBINED where COMPTYPE = '18' and CID = '{0}' and COMPID = '{1}';", v.Global.iAltID, V.Global.sProspectID, V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtNotes", "Con", V.Local.sSQL, True)
+	
+	'Setting gv
+	GUI.FormNotes.gsgcNotes.AddGridviewFromDatatable("gvNotes", "dtNotes")
+	
+	''General Gridview properties
+	GUI.FormNotes.gsgcNotes.SetGridviewProperty("gvNotes", V.Enum.GridViewPropertyNames!EnableAppearanceOddRow, True)
+	GUI.FormNotes.gsgcNotes.SetGridviewProperty("gvNotes", V.Enum.GridViewPropertyNames!RowAutoHeight, True)
+	GUI.FormNotes.gsgcNotes.SetGridviewProperty("gvNotes", V.Enum.GridViewPropertyNames!ColumnPanelRowHeight, 45)
+	GUI.FormNotes.gsgcNotes.SetGridviewProperty("gvNotes", V.Enum.GridViewPropertyNames!EnableAppearanceFocusedRow, True) 
+	GUI.FormNotes.gsgcNotes.SetGridviewProperty("gvNotes", V.Enum.GridViewPropertyNames!ShowAutoFilterRow, True) 
+
+	'Formatting captions
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTE_DATETIME", V.Enum.ColumnPropertyNames!Caption, "Date")
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTES", V.Enum.ColumnPropertyNames!Caption, "Notes")
+	
+	'Formatting headers
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTE_DATETIME", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTES", V.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	'Formatting headers allignment
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTE_DATETIME", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTES", V.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+
+	'Formatting widths
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTE_DATETIME", V.Enum.ColumnPropertyNames!MaxWidth, 80)
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTES", V.Enum.ColumnPropertyNames!MinWidth, 250)
+	
+	'Formatting date columns to show only date
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTE_DATETIME", V.Enum.ColumnPropertyNames!DisplayCustomDateTime, "d")
+	
+	GUI.FormNotes.gsgcNotes.SetColumnProperty("gvNotes", "NOTES", V.Enum.ColumnPropertyNames!CellWordWrap, "Wrap") 
+	
+	'Displaying gv
+	GUI.FormNotes.gsgcNotes.MainView("gvNotes")
+	GUI.FormNotes.gsgcNotes.Visible(True)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtGvNotes.End
+
+Program.Sub.FormUpdate_UnLoad.Start
+'Making form invisible and setting focus to mainview
+GUI.FormUpdate..Visible(False)
+GUI.FormLeads..SetFocus
+GUI.FormLeads..Enabled(True)
+
+F.Intrinsic.Control.CallSub("cmdRefresh_Click")
+Program.Sub.FormUpdate_UnLoad.End
+
+Program.Sub.cmdNewSR_Click.Start
+'This subroutine shows a browser of existing SP.
+F.Intrinsic.Control.Try
+
+	V.Local.sSelectedSR.Declare(String)
+	V.Local.sTitles.Declare(String)
+	V.Local.iWidths.Declare(Long)
+	
+	'Setting up parameters for browser
+	F.Intrinsic.String.Split("Code*!*Salesperson","*!*",V.Local.sTitles)
+	F.Intrinsic.String.Split("80*!*100","*!*",V.Local.iWidths)
+	F.Intrinsic.UI.Browser("Select the ...","Con","select distinct RTRIM(SALESPERSON_CODE) CODE, RTRIM(SALESPERSON) SALESPERSON from SALESPEOPLE where KEY1 = 'AR ' and KEY2 = 'SLM' order by CODE", V.Local.sTitles, V.Local.iWidths, 6000, 8000, V.Local.sSelectedSR)
+	
+	F.Intrinsic.Control.If(V.Local.sSelectedSR.IsNotCancel)
+		'Displaying selected salesrep
+		f.Intrinsic.String.Split(V.Local.sSelectedSR, "*!*", V.Local.sSelectedSR)
+		GUI.FormUpdate.txtNewSR.Text(V.Local.sSelectedSR(0))
+	F.Intrinsic.Control.Else
+		'Displaying error msg
+		F.Intrinsic.UI.Msgbox("A salesperson must be selected.", V.Global.sARCID)
+		GUI.FormUpdate.txtNewSR.Text("")
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdNewSR_Click.End
+
+Program.Sub.cmdOldSR_Click.Start
+'This subroutine shows a browser of existing SP in the dashboard's records.
+F.Intrinsic.Control.Try
+
+	V.Local.sSelectedSR.Declare(String)
+	V.Local.sTitles.Declare(String)
+	V.Local.iWidths.Declare(Long)
+	
+	'Setting up parameters for browser
+	F.Intrinsic.String.Split("Code*!*Salesperson","*!*",V.Local.sTitles)
+	F.Intrinsic.String.Split("80*!*100","*!*",V.Local.iWidths)
+	F.Intrinsic.UI.Browser("Select the ...","Con","select distinct RTRIM(PA.SALSM) SALSM, RTRIM(SP.SALESPERSON) SALESPERSON from V_PROSPECT_AUX PA LEFT JOIN SALESPEOPLE SP on PA.SALSM = SP.SALESPERSON_CODE where PA.SALSM <> '' and SP.KEY1 = 'AR ' and SP.KEY2 = 'SLM';", V.Local.sTitles, V.Local.iWidths, 6000, 8000, V.Local.sSelectedSR)
+	
+	F.Intrinsic.Control.If(V.Local.sSelectedSR.IsNotCancel)
+		'Displaying selected salesrep
+		f.Intrinsic.String.Split(V.Local.sSelectedSR, "*!*", V.Local.sSelectedSR)
+		GUI.FormUpdate.txtOldSR.Text(V.Local.sSelectedSR(0))
+	F.Intrinsic.Control.Else
+		'Displaying error msg
+		F.Intrinsic.UI.Msgbox("A salesperson must be selected.", V.Global.sARCID)
+		GUI.FormUpdate.txtOldSR.Text("")
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdOldSR_Click.End
+
+Program.Sub.cmdUpdateSave_Click.Start
+'This subroutine updates the sales rep in all records assigned to another sales rep
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	
+	'Updating value
+	F.Intrinsic.String.Build("update PROSPECT_AUX set SALSM = '{0}' where SALSM = '{1}';", V.Screen.FormUpdate!txtNewSR.Text, V.Screen.FormUpdate!txtOldSR.Text, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.CallSub("FormUpdate_UnLoad")
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdUpdateSave_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8328.25015$}$1
+${$6$}$apadilla$}$20230313142203295$}$Lag9STqBJOmNXSbd5+msRcBWPGz0aFqSq3jmzPZEOBYNUEMeJjnKlUwCR9JY3C3ek49R7F+CiR4I5IajuG6oJg==
+Program.Sub.Comments.End
