@@ -1,0 +1,1146 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.FormShipping..Create(BaseForm)
+Gui.FormShipping..Caption("Shipping Quote Requirements")
+Gui.FormShipping..Size(915,557)
+Gui.FormShipping..MinX(0)
+Gui.FormShipping..MinY(0)
+Gui.FormShipping..Position(0,0)
+Gui.FormShipping..AlwaysOnTop(False)
+Gui.FormShipping..FontName("Tahoma")
+Gui.FormShipping..FontSize(8.25)
+Gui.FormShipping..ControlBox(True)
+Gui.FormShipping..MaxButton(True)
+Gui.FormShipping..MinButton(True)
+Gui.FormShipping..MousePointer(0)
+Gui.FormShipping..Moveable(True)
+Gui.FormShipping..Sizeable(True)
+Gui.FormShipping..ShowInTaskBar(True)
+Gui.FormShipping..TitleBar(True)
+Gui.FormShipping..Event(UnLoad,FormShipping_UnLoad)
+Gui.FormShipping.frameCheckboxes.Create(Frame)
+Gui.FormShipping.frameCheckboxes.Enabled(True)
+Gui.FormShipping.frameCheckboxes.Visible(True)
+Gui.FormShipping.frameCheckboxes.Zorder(0)
+Gui.FormShipping.frameCheckboxes.Size(884,369)
+Gui.FormShipping.frameCheckboxes.Position(19,16)
+Gui.FormShipping.frameCheckboxes.Caption("")
+Gui.FormShipping.frameCheckboxes.FontName("Tahoma")
+Gui.FormShipping.frameCheckboxes.FontSize(8.25)
+Gui.FormShipping.chk11.Create(CheckBox)
+Gui.FormShipping.chk11.Enabled(True)
+Gui.FormShipping.chk11.Visible(True)
+Gui.FormShipping.chk11.Zorder(0)
+Gui.FormShipping.chk11.Size(163,20)
+Gui.FormShipping.chk11.Position(206,114)
+Gui.FormShipping.chk11.Caption("LTL Truck")
+Gui.FormShipping.chk11.FontName("Tahoma")
+Gui.FormShipping.chk11.FontSize(8.25)
+Gui.FormShipping.chk11.Parent("frameCheckboxes")
+Gui.FormShipping.chk11.Event(Change,chk11_Change)
+Gui.FormShipping.lbl2.Create(Label,"Ship Via",True,37,13,0,617,54,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl2.BorderStyle(0)
+Gui.FormShipping.lbl2.Parent("frameCheckboxes")
+Gui.FormShipping.lbl3.Create(Label,"Special Instructions",True,93,13,0,9,215,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl3.BorderStyle(0)
+Gui.FormShipping.lbl3.Parent("frameCheckboxes")
+Gui.FormShipping.chk8.Create(CheckBox)
+Gui.FormShipping.chk8.Enabled(True)
+Gui.FormShipping.chk8.Visible(True)
+Gui.FormShipping.chk8.Zorder(0)
+Gui.FormShipping.chk8.Size(168,20)
+Gui.FormShipping.chk8.Position(206,36)
+Gui.FormShipping.chk8.Caption("Inside Delivery")
+Gui.FormShipping.chk8.FontName("Tahoma")
+Gui.FormShipping.chk8.FontSize(8.25)
+Gui.FormShipping.chk8.Parent("frameCheckboxes")
+Gui.FormShipping.chk8.Event(Change,chk8_Change)
+Gui.FormShipping.chk9.Create(CheckBox)
+Gui.FormShipping.chk9.Enabled(True)
+Gui.FormShipping.chk9.Visible(True)
+Gui.FormShipping.chk9.Zorder(0)
+Gui.FormShipping.chk9.Size(166,20)
+Gui.FormShipping.chk9.Position(206,62)
+Gui.FormShipping.chk9.Caption("Insurance")
+Gui.FormShipping.chk9.FontName("Tahoma")
+Gui.FormShipping.chk9.FontSize(8.25)
+Gui.FormShipping.chk9.Parent("frameCheckboxes")
+Gui.FormShipping.chk9.Event(Change,chk9_Change)
+Gui.FormShipping.chk6.Create(CheckBox)
+Gui.FormShipping.chk6.Enabled(True)
+Gui.FormShipping.chk6.Visible(True)
+Gui.FormShipping.chk6.Zorder(0)
+Gui.FormShipping.chk6.Size(170,20)
+Gui.FormShipping.chk6.Position(8,140)
+Gui.FormShipping.chk6.Caption("Direct Truck")
+Gui.FormShipping.chk6.FontName("Tahoma")
+Gui.FormShipping.chk6.FontSize(8.25)
+Gui.FormShipping.chk6.Parent("frameCheckboxes")
+Gui.FormShipping.chk6.Event(Change,chk6_Change)
+Gui.FormShipping.txtCarrier.Create(TextBox,"",True,186,20,0,616,25,True,0,"Tahoma",8.25,,1)
+Gui.FormShipping.txtCarrier.Locked(True)
+Gui.FormShipping.txtCarrier.Parent("frameCheckboxes")
+Gui.FormShipping.txtShipVia.Create(TextBox,"",True,186,20,0,616,71,True,0,"Tahoma",8.25,,1)
+Gui.FormShipping.txtShipVia.Locked(True)
+Gui.FormShipping.txtShipVia.Parent("frameCheckboxes")
+Gui.FormShipping.lbl1.Create(Label,"Carrier",True,33,13,0,617,10,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl1.BorderStyle(0)
+Gui.FormShipping.lbl1.Parent("frameCheckboxes")
+Gui.FormShipping.chk2.Create(CheckBox)
+Gui.FormShipping.chk2.Enabled(True)
+Gui.FormShipping.chk2.Visible(True)
+Gui.FormShipping.chk2.Zorder(0)
+Gui.FormShipping.chk2.Size(177,20)
+Gui.FormShipping.chk2.Position(8,36)
+Gui.FormShipping.chk2.Caption("Appointment Needed")
+Gui.FormShipping.chk2.FontName("Tahoma")
+Gui.FormShipping.chk2.FontSize(8.25)
+Gui.FormShipping.chk2.Parent("frameCheckboxes")
+Gui.FormShipping.chk2.Event(Change,chk2_Change)
+Gui.FormShipping.chk12.Create(CheckBox)
+Gui.FormShipping.chk12.Enabled(True)
+Gui.FormShipping.chk12.Visible(True)
+Gui.FormShipping.chk12.Zorder(0)
+Gui.FormShipping.chk12.Size(168,20)
+Gui.FormShipping.chk12.Position(206,140)
+Gui.FormShipping.chk12.Caption("Military")
+Gui.FormShipping.chk12.FontName("Tahoma")
+Gui.FormShipping.chk12.FontSize(8.25)
+Gui.FormShipping.chk12.Parent("frameCheckboxes")
+Gui.FormShipping.chk12.Event(Change,chk12_Change)
+Gui.FormShipping.txtContactNumber.Create(TextBox,"",False,149,20,0,617,166,True,0,"Tahoma",8.25,,1)
+Gui.FormShipping.txtContactNumber.Parent("frameCheckboxes")
+Gui.FormShipping.chk17.Create(CheckBox)
+Gui.FormShipping.chk17.Enabled(True)
+Gui.FormShipping.chk17.Visible(True)
+Gui.FormShipping.chk17.Zorder(0)
+Gui.FormShipping.chk17.Size(165,20)
+Gui.FormShipping.chk17.Position(389,114)
+Gui.FormShipping.chk17.Caption("Restricted Access")
+Gui.FormShipping.chk17.FontName("Tahoma")
+Gui.FormShipping.chk17.FontSize(8.25)
+Gui.FormShipping.chk17.Parent("frameCheckboxes")
+Gui.FormShipping.chk17.Event(Change,chk17_Change)
+Gui.FormShipping.chk3.Create(CheckBox)
+Gui.FormShipping.chk3.Enabled(True)
+Gui.FormShipping.chk3.Visible(True)
+Gui.FormShipping.chk3.Zorder(0)
+Gui.FormShipping.chk3.Size(139,20)
+Gui.FormShipping.chk3.Position(389,140)
+Gui.FormShipping.chk3.Caption("Call Prior to Delivery")
+Gui.FormShipping.chk3.FontName("Tahoma")
+Gui.FormShipping.chk3.FontSize(8.25)
+Gui.FormShipping.chk3.Parent("frameCheckboxes")
+Gui.FormShipping.chk3.Event(Change,chk3_Change)
+Gui.FormShipping.chk14.Create(CheckBox)
+Gui.FormShipping.chk14.Enabled(True)
+Gui.FormShipping.chk14.Visible(True)
+Gui.FormShipping.chk14.Zorder(0)
+Gui.FormShipping.chk14.Size(180,20)
+Gui.FormShipping.chk14.Position(389,36)
+Gui.FormShipping.chk14.Caption("Remote Access")
+Gui.FormShipping.chk14.FontName("Tahoma")
+Gui.FormShipping.chk14.FontSize(8.25)
+Gui.FormShipping.chk14.Parent("frameCheckboxes")
+Gui.FormShipping.chk14.Event(Change,chk14_Change)
+Gui.FormShipping.chk16.Create(CheckBox)
+Gui.FormShipping.chk16.Enabled(True)
+Gui.FormShipping.chk16.Visible(True)
+Gui.FormShipping.chk16.Zorder(0)
+Gui.FormShipping.chk16.Size(223,20)
+Gui.FormShipping.chk16.Position(389,88)
+Gui.FormShipping.chk16.Caption("Residential Signature required")
+Gui.FormShipping.chk16.FontName("Tahoma")
+Gui.FormShipping.chk16.FontSize(8.25)
+Gui.FormShipping.chk16.Parent("frameCheckboxes")
+Gui.FormShipping.chk16.Event(Change,chk16_Change)
+Gui.FormShipping.chk15.Create(CheckBox)
+Gui.FormShipping.chk15.Enabled(True)
+Gui.FormShipping.chk15.Visible(True)
+Gui.FormShipping.chk15.Zorder(0)
+Gui.FormShipping.chk15.Size(160,20)
+Gui.FormShipping.chk15.Position(389,62)
+Gui.FormShipping.chk15.Caption("Residential")
+Gui.FormShipping.chk15.FontName("Tahoma")
+Gui.FormShipping.chk15.FontSize(8.25)
+Gui.FormShipping.chk15.Parent("frameCheckboxes")
+Gui.FormShipping.chk15.Event(Change,chk15_Change)
+Gui.FormShipping.chk13.Create(CheckBox)
+Gui.FormShipping.chk13.Enabled(True)
+Gui.FormShipping.chk13.Visible(True)
+Gui.FormShipping.chk13.Zorder(0)
+Gui.FormShipping.chk13.Size(160,20)
+Gui.FormShipping.chk13.Position(389,10)
+Gui.FormShipping.chk13.Caption("Prison")
+Gui.FormShipping.chk13.FontName("Tahoma")
+Gui.FormShipping.chk13.FontSize(8.25)
+Gui.FormShipping.chk13.Parent("frameCheckboxes")
+Gui.FormShipping.chk13.Event(Change,chk13_Change)
+Gui.FormShipping.cmdSaveSettings.Create(Button)
+Gui.FormShipping.cmdSaveSettings.Enabled(True)
+Gui.FormShipping.cmdSaveSettings.Visible(True)
+Gui.FormShipping.cmdSaveSettings.Zorder(0)
+Gui.FormShipping.cmdSaveSettings.Size(60,23)
+Gui.FormShipping.cmdSaveSettings.Position(811,207)
+Gui.FormShipping.cmdSaveSettings.Caption("Save")
+Gui.FormShipping.cmdSaveSettings.FontName("Tahoma")
+Gui.FormShipping.cmdSaveSettings.FontSize(8.25)
+Gui.FormShipping.cmdSaveSettings.Event(Click,cmdSaveSettings_Click)
+Gui.FormShipping.cmdSaveSettings.ImageAlign(8)
+Gui.FormShipping.cmdSaveSettings.Parent("frameCheckboxes")
+Gui.FormShipping.chk1.Create(CheckBox)
+Gui.FormShipping.chk1.Enabled(True)
+Gui.FormShipping.chk1.Visible(True)
+Gui.FormShipping.chk1.Zorder(0)
+Gui.FormShipping.chk1.Size(169,20)
+Gui.FormShipping.chk1.Position(8,10)
+Gui.FormShipping.chk1.Caption("Alaska Appointment")
+Gui.FormShipping.chk1.FontName("Tahoma")
+Gui.FormShipping.chk1.FontSize(8.25)
+Gui.FormShipping.chk1.Parent("frameCheckboxes")
+Gui.FormShipping.chk1.Event(Change,chk1_Change)
+Gui.FormShipping.lbl7.Create(Label,"Contact Number",False,78,13,0,531,170,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl7.BorderStyle(0)
+Gui.FormShipping.lbl7.Parent("frameCheckboxes")
+Gui.FormShipping.lbl6.Create(Label,"Contact Name",False,68,13,0,541,144,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl6.BorderStyle(0)
+Gui.FormShipping.lbl6.Parent("frameCheckboxes")
+Gui.FormShipping.chk7.Create(CheckBox)
+Gui.FormShipping.chk7.Enabled(True)
+Gui.FormShipping.chk7.Visible(True)
+Gui.FormShipping.chk7.Zorder(0)
+Gui.FormShipping.chk7.Size(168,20)
+Gui.FormShipping.chk7.Position(206,10)
+Gui.FormShipping.chk7.Caption("Exhibition Pick Up")
+Gui.FormShipping.chk7.FontName("Tahoma")
+Gui.FormShipping.chk7.FontSize(8.25)
+Gui.FormShipping.chk7.Parent("frameCheckboxes")
+Gui.FormShipping.chk7.Event(Change,chk7_Change)
+Gui.FormShipping.chk10.Create(CheckBox)
+Gui.FormShipping.chk10.Enabled(True)
+Gui.FormShipping.chk10.Visible(True)
+Gui.FormShipping.chk10.Zorder(0)
+Gui.FormShipping.chk10.Size(170,20)
+Gui.FormShipping.chk10.Position(206,88)
+Gui.FormShipping.chk10.Caption("Liftgate Needed")
+Gui.FormShipping.chk10.FontName("Tahoma")
+Gui.FormShipping.chk10.FontSize(8.25)
+Gui.FormShipping.chk10.Parent("frameCheckboxes")
+Gui.FormShipping.chk10.Event(Change,chk10_Change)
+Gui.FormShipping.txtContactName.Create(TextBox,"",False,192,20,0,617,140,True,0,"Tahoma",8.25,,1)
+Gui.FormShipping.txtContactName.Parent("frameCheckboxes")
+Gui.FormShipping.chk4.Create(CheckBox)
+Gui.FormShipping.chk4.Enabled(True)
+Gui.FormShipping.chk4.Visible(True)
+Gui.FormShipping.chk4.Zorder(0)
+Gui.FormShipping.chk4.Size(179,20)
+Gui.FormShipping.chk4.Position(8,88)
+Gui.FormShipping.chk4.Caption("Conestoga Truck")
+Gui.FormShipping.chk4.FontName("Tahoma")
+Gui.FormShipping.chk4.FontSize(8.25)
+Gui.FormShipping.chk4.Parent("frameCheckboxes")
+Gui.FormShipping.chk4.Event(Change,chk4_Change)
+Gui.FormShipping.chk5.Create(CheckBox)
+Gui.FormShipping.chk5.Enabled(True)
+Gui.FormShipping.chk5.Visible(True)
+Gui.FormShipping.chk5.Zorder(0)
+Gui.FormShipping.chk5.Size(181,20)
+Gui.FormShipping.chk5.Position(8,114)
+Gui.FormShipping.chk5.Caption("Construction Site")
+Gui.FormShipping.chk5.FontName("Tahoma")
+Gui.FormShipping.chk5.FontSize(8.25)
+Gui.FormShipping.chk5.Parent("frameCheckboxes")
+Gui.FormShipping.chk5.Event(Change,chk5_Change)
+Gui.FormShipping.chk18.Create(CheckBox)
+Gui.FormShipping.chk18.Enabled(True)
+Gui.FormShipping.chk18.Visible(True)
+Gui.FormShipping.chk18.Zorder(0)
+Gui.FormShipping.chk18.Size(162,20)
+Gui.FormShipping.chk18.Position(8,63)
+Gui.FormShipping.chk18.Caption("Schools/Colleges")
+Gui.FormShipping.chk18.FontName("Tahoma")
+Gui.FormShipping.chk18.FontSize(8.25)
+Gui.FormShipping.chk18.Parent("frameCheckboxes")
+Gui.FormShipping.chk18.Event(Change,chk18_Change)
+Gui.FormShipping.txtSpecialInstructions.Create(TextBoxR)
+Gui.FormShipping.txtSpecialInstructions.Enabled(True)
+Gui.FormShipping.txtSpecialInstructions.Visible(True)
+Gui.FormShipping.txtSpecialInstructions.Zorder(0)
+Gui.FormShipping.txtSpecialInstructions.Size(865,122)
+Gui.FormShipping.txtSpecialInstructions.Position(7,236)
+Gui.FormShipping.txtSpecialInstructions.FontName("Tahoma")
+Gui.FormShipping.txtSpecialInstructions.FontSize(8.25)
+Gui.FormShipping.txtSpecialInstructions.Parent("frameCheckboxes")
+Gui.FormShipping.frameShipping.Create(Frame)
+Gui.FormShipping.frameShipping.Enabled(True)
+Gui.FormShipping.frameShipping.Visible(True)
+Gui.FormShipping.frameShipping.Zorder(0)
+Gui.FormShipping.frameShipping.Size(882,117)
+Gui.FormShipping.frameShipping.Position(19,398)
+Gui.FormShipping.frameShipping.Caption("")
+Gui.FormShipping.frameShipping.FontName("Tahoma")
+Gui.FormShipping.frameShipping.FontSize(8.25)
+Gui.FormShipping.lbl4.Create(Label,"Please browse and select the Freight Quote PDF to automatically send per email:",True,387,13,0,7,29,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl4.BorderStyle(0)
+Gui.FormShipping.lbl4.Parent("frameShipping")
+Gui.FormShipping.cmdBrowser.Create(Button)
+Gui.FormShipping.cmdBrowser.Enabled(True)
+Gui.FormShipping.cmdBrowser.Visible(True)
+Gui.FormShipping.cmdBrowser.Zorder(0)
+Gui.FormShipping.cmdBrowser.Size(40,23)
+Gui.FormShipping.cmdBrowser.Position(835,46)
+Gui.FormShipping.cmdBrowser.Caption("")
+Gui.FormShipping.cmdBrowser.FontName("Tahoma")
+Gui.FormShipping.cmdBrowser.FontSize(8.25)
+Gui.FormShipping.cmdBrowser.SvgPicture("icon_browser_color")
+Gui.FormShipping.cmdBrowser.ImageAlign(8)
+Gui.FormShipping.cmdBrowser.Parent("frameShipping")
+Gui.FormShipping.cmdBrowser.Event(Click,cmdBrowser_Click)
+Gui.FormShipping.cmdSavePDF.Create(Button)
+Gui.FormShipping.cmdSavePDF.Enabled(True)
+Gui.FormShipping.cmdSavePDF.Visible(True)
+Gui.FormShipping.cmdSavePDF.Zorder(0)
+Gui.FormShipping.cmdSavePDF.Size(60,23)
+Gui.FormShipping.cmdSavePDF.Position(815,84)
+Gui.FormShipping.cmdSavePDF.Caption("Save")
+Gui.FormShipping.cmdSavePDF.FontName("Tahoma")
+Gui.FormShipping.cmdSavePDF.FontSize(8.25)
+Gui.FormShipping.cmdSavePDF.Parent("frameShipping")
+Gui.FormShipping.cmdSavePDF.Event(Click,cmdSavePDF_Click)
+Gui.FormShipping.cmdSavePDF.ImageAlign(8)
+Gui.FormShipping.txtFilePath.Create(TextBox,"",True,815,20,0,7,47,True,0,"Tahoma",8.25,,1)
+Gui.FormShipping.txtFilePath.Parent("frameShipping")
+Gui.FormShipping.txtFilePath.Locked(True)
+Gui.FormShipping.lbl5.Create(Label,"Enter Freight Cost",True,88,13,0,9,83,True,0,"Tahoma",8.25,,0,0)
+Gui.FormShipping.lbl5.BorderStyle(0)
+Gui.FormShipping.lbl5.Parent("frameShipping")
+Gui.FormShipping.txtFreight.Create(TextBox,"",True,125,20,0,106,81,True,0,"Tahoma",8.25,,1)
+Gui.FormShipping.txtFreight.NumericOnly(1)
+Gui.FormShipping.txtFreight.Parent("frameShipping")
+Gui.FormShipping.cmdCreateDocLink.Create(Button)
+Gui.FormShipping.cmdCreateDocLink.Enabled(True)
+Gui.FormShipping.cmdCreateDocLink.Visible(True)
+Gui.FormShipping.cmdCreateDocLink.Zorder(0)
+Gui.FormShipping.cmdCreateDocLink.Size(106,23)
+Gui.FormShipping.cmdCreateDocLink.Position(693,84)
+Gui.FormShipping.cmdCreateDocLink.Caption("Link PDF to Quote")
+Gui.FormShipping.cmdCreateDocLink.FontName("Tahoma")
+Gui.FormShipping.cmdCreateDocLink.FontSize(8.25)
+Gui.FormShipping.cmdCreateDocLink.Parent("frameShipping")
+Gui.FormShipping.cmdCreateDocLink.Event(Click,cmdCreateDocLink_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.sError.Declare(String)
+V.Global.sQuoteNumber.Declare(String)
+V.Global.sWFID.Declare(String)
+V.Global.sWFName.Declare(String, "Freight Quote WF")
+V.Global.sARCID.Declare(String, "ARC 6909")
+v.Global.sName.Declare(String)
+V.Global.sShipToZIP.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Author: Arturo Almaguer
+'Date: 10/14/22
+'Customer: Air Quality Engineering, quote: 11943
+'This program allows a salesperson to add shipping requirements when saving a new quote and send them to Shipping department so they can generate a Freight quote for this quote number.
+'This script is fired off the hooks shown below.
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+F.Intrinsic.Control.Try
+
+	v.Local.sSQL.Declare(String)
+	v.Local.sSQL2.Declare(String)
+	V.Local.iCounter.Declare(Long)
+	v.Local.sControl.Declare(String)
+	v.Local.sCheckBoxNumber.Declare(String)
+	V.Local.iWFID.Declare(Long)
+	v.Local.sDateTime.Declare(String)
+	
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	
+		F.Intrinsic.Control.Case(10710)
+		'Quote Header populate hook
+			
+			'Renaming "Script 2" button
+			V.Passed.000202.Set("Freight Quote")
+			
+			'Locking "Script 2" button if its not an existing order
+			F.Intrinsic.Control.If(V.Caller.Switches, <>, "O")
+				F.Intrinsic.UI.ChangeCallerProperty(V.Passed.000202, "LOCK", 1)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.If(V.Caller.Switches, =, "O")
+				
+				'Calling sub to unhide label and checkbox
+				F.Intrinsic.Control.CallSub("UnhideControls")
+
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Case(10923)
+		'Quote Header post save hook
+	
+			F.Intrinsic.Control.If(V.Caller.Switches, =, "N")
+				
+				'Calling subs to validate if custom table exists and to create temp dt
+				F.Intrinsic.Control.CallSub("CheckTable")
+				F.Intrinsic.Control.CallSub("CreateOptionsDt")
+				
+				'Getting Quote number
+				F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Global.sQuoteNumber)
+				
+				'Validating if quote has a Freight line
+				F.ODBC.Connection!Con.OpenCompanyConnection
+				F.Intrinsic.String.Build("select PART from V_QUOTE_LINES where QUOTE_NO = '{0}' and PART = 'FREIGHT';", V.Global.sQuoteNumber, V.Local.sSQL)
+				F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sSQL)
+				
+				F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, False)
+					
+					'There is a Freight line, passing values from core screen to custom screen to allow them to select shipping requirements to generate Freight Quote
+					GUI.FormShipping.txtCarrier.Text(v.Passed.000095)
+					GUI.FormShipping.txtShipVia.Text(v.Passed.000028)
+					v.Global.sName.Set(V.Passed.000008)
+					V.Global.sShipToZIP.Set(V.Passed.000018)
+					
+					'Displaying form
+					gui.FormShipping.frameShipping.Enabled(False)
+					GUI.FormShipping..Show
+						
+				F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.ElseIf(V.Caller.Switches, =, "O")
+				
+				'If option is on, it means that the WF will be retriggered for the quote. No need to validate if there is freight since there must be, hence the process being triggered when it was a new quote.
+				F.Intrinsic.Control.If(V.Passed.GAB-CHK-1, =, "Y")
+					
+					'Calling sub to create temp dt
+					F.Intrinsic.Control.CallSub("CreateOptionsDt")
+					
+					'Getting Quote number
+					F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Global.sQuoteNumber)
+					
+					'Getting the WF ID associated with the existing quote number in custom table
+					F.ODBC.Connection!Con.OpenCompanyConnection
+					F.Intrinsic.String.Build("select WF_ID from GCG_6909_SHIPPING where QUOTE_NO = '{0}';", V.Global.sQuoteNumber, V.Local.sSQL)
+					F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.iWFID)
+					
+					'Update WF lines to complete them
+					F.Intrinsic.String.Format(V.Ambient.Now, "YYYY-MM-DD HH:NN:SS", V.Local.sDateTime)
+					F.Intrinsic.String.Build("update ATG_WF_LINES set PERC_COMPLETION = '100', COMPLETION_DATE = '{0}', COMPLETED_BY = 'NA' where WF_ID = '{1}';", V.Local.sDateTime, V.Local.iWFID, V.Local.sSQL)
+					F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+					
+					'Deleting existing data for quote number in custom table
+					F.Intrinsic.String.Build("delete from GCG_6909_SHIPPING where QUOTE_NO = '{0}';", V.Global.sQuoteNumber, V.Local.sSQL)
+					F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+					
+					'Passing values from core screen to custom screen
+					GUI.FormShipping.txtCarrier.Text(v.Passed.000095)
+					GUI.FormShipping.txtShipVia.Text(v.Passed.000028)
+					v.Global.sName.Set(V.Passed.000008)
+					V.Global.sShipToZIP.Set(V.Passed.000018)
+					
+					'Displaying form
+					gui.FormShipping.frameShipping.Enabled(False)
+					GUI.FormShipping..Show
+					
+				F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.EndIf
+	
+		F.Intrinsic.Control.Case(10970)
+		'Quote Header Script 2 hook
+		
+			F.Intrinsic.Control.If(V.Caller.Switches, =, "O")
+				
+				'Getting the quote's shipping requirements from custom table
+				F.ODBC.Connection!Con.OpenCompanyConnection
+				F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Global.sQuoteNumber)
+				F.Intrinsic.String.Build("select * from GCG_6909_SHIPPING where QUOTE_NO = '{0}';", V.Global.sQuoteNumber, V.Local.sSQL)
+				F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sSQL2)
+				
+				F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, False)
+					
+					'Creating dt
+					F.Data.DataTable.CreateFromSQL("dtLoadOptions", "Con", V.Local.sSQL, True)
+					
+					'Looping through all 18 checkboxes values in dt
+					Function.Intrinsic.Control.DoUntil(V.Local.iCounter, =, 18)
+						
+						F.Intrinsic.Math.Add(V.Local.iCounter, 1, V.Local.iCounter)
+				
+						'Building control strings
+						F.Intrinsic.String.Build("chk{0}", V.Local.iCounter, V.Local.sCheckBoxNumber)
+						F.Intrinsic.String.Build("CHECKBOX_{0}", V.Local.iCounter, V.Local.sControl)
+						
+						'If checkbox # is True, then make checkbox's text bold.
+						GUI.FormShipping.[V.Local.sCheckBoxNumber].Value(V.DataTable.dtLoadOptions(0).[V.Local.sControl]!FieldVal)
+						F.Intrinsic.Control.If(V.DataTable.dtLoadOptions(0).[V.Local.sControl]!FieldVal, =, True)
+							GUI.FormShipping.[V.Local.sCheckBoxNumber].FontStyle(True, False, False, False)
+						F.Intrinsic.Control.EndIf
+						
+					Function.Intrinsic.Control.Loop
+					
+					gui.FormShipping.txtCarrier.Text(V.DataTable.dtLoadOptions(0).CARRIER!FieldValTrim)
+					gui.FormShipping.txtShipVia.Text(V.DataTable.dtLoadOptions(0).SHIP_VIA!FieldValTrim)
+					gui.FormShipping.txtSpecialInstructions.Text(V.DataTable.dtLoadOptions(0).INSTRUCTIONS!FieldValTrim)
+					gui.FormShipping.txtContactName.Text(V.DataTable.dtLoadOptions(0).CHK3_CONTACTNAME!FieldValTrim)
+					gui.FormShipping.txtContactName.FontStyle(True, False, False, False)
+					gui.FormShipping.txtContactNumber.Text(V.DataTable.dtLoadOptions(0).CHK3_CONTACTNUMBER!FieldValTrim)
+					gui.FormShipping.txtContactNumber.FontStyle(True, False, False, False)
+													
+					'Disabling some buttons and displaying screen
+					gui.FormShipping.frameCheckboxes.Enabled(False)
+					GUI.FormShipping.cmdSavePDF.Enabled(False)
+					GUI.FormShipping.cmdCreateDocLink.Enabled(False)
+					GUI.FormShipping..Show
+				
+				F.Intrinsic.Control.Else
+					
+					'Displaying error msg since this quote number doesnt exist in custom table
+					F.Intrinsic.UI.Msgbox("Freight Quote wasn't required for this quote, no data available.", V.Global.sARCID)
+					F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+	
+				F.Intrinsic.Control.EndIf
+				
+			F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.EndSelect
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.CheckTable.Start
+'This subroutine validates whether the custom table exist, creates it if it doesn't.
+
+F.Intrinsic.Control.Try
+
+	V.Local.bExists.Declare(Boolean)
+	
+	F.ODBC.Connection!Con.OpenCompanyConnection
+	F.ODBC.Connection!Con.TableExists("GCG_6909_SHIPPING", V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists, =, False)
+			F.ODBC.Connection!Con.Execute("CREATE TABLE GCG_6909_SHIPPING (QUOTE_NO CHAR(7) PRIMARY KEY, CUSTOMER_NAME CHAR(30), CHECKBOX_1 BIT, CHECKBOX_2 BIT, CHECKBOX_3 BIT, CHECKBOX_4 BIT, CHECKBOX_5 BIT, CHECKBOX_6 BIT, CHECKBOX_7 BIT, CHECKBOX_8 BIT, CHECKBOX_9 BIT, CHECKBOX_10 BIT, CHECKBOX_11 BIT, CHECKBOX_12 BIT, CHECKBOX_13 BIT, CHECKBOX_14 BIT, CHECKBOX_15 BIT, CHECKBOX_16 BIT, CHECKBOX_17 BIT, CHECKBOX_18 BIT, CARRIER CHAR(6), SHIP_VIA CHAR(20), INSTRUCTIONS CHAR(180), WF_ID INTEGER, CHK3_CONTACTNAME CHAR(30), CHK3_CONTACTNUMBER CHAR(20), USER_ID CHAR(20), DATETIME_STAMP DATETIME, FREIGHT NUMERIC (12,4));")
+		F.Intrinsic.Control.EndIf
+	F.ODBC.Connection!Con.Close
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.CheckTable.End
+
+Program.Sub.cmdSaveSettings_Click.Start
+'This subroutine triggers a workflow and saves shipping requirements to the custom table
+
+F.Intrinsic.Control.Try
+
+	V.Local.dDueDate.Declare(Date)
+	V.Local.iWF.Declare(Long)
+	V.Local.iTemplateID.Declare(Long)
+	V.Local.sTitle.Declare(String)
+	V.Local.sIntructions.Declare(String)
+	V.Local.sDateTime.Declare(String)
+	V.Local.sSQL.Declare(String)
+	
+	'Locking Save button to avoid double clicks 
+	GUI.FormShipping.cmdSaveSettings.Locked(True)
+	
+	'TRIGERRING WF
+	'Setting WF Due Date
+	F.Intrinsic.Date.DateAddWorkdays(V.Ambient.Date, 2, "62", V.Local.dDueDate)
+
+	'Getting WF Template ID
+	F.Global.WorkFlow.GetTemplateIDFromTitle(V.Global.sWFName, V.Local.iTemplateID)
+	
+	'Ending program if no WF ID was found
+	F.Intrinsic.Control.If(V.Local.iTemplateID,=,-1)
+	   F.Intrinsic.UI.Msgbox("Workflow template doesn't exist, WF won't be triggered.")
+	   F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+	F.Intrinsic.Control.EndIf
+	
+	'Creating new WF from template.
+	F.Intrinsic.String.Build("Quote # {0}", V.Global.sQuoteNumber, V.Local.sTitle)
+	F.Global.WorkFlow.CreateFromTemplate(V.Local.iTemplateID, V.Local.sTitle, V.Ambient.Date.PervasiveDate, V.Local.dDueDate.PervasiveDate, V.Caller.User, 0, V.Local.iWF)
+	V.Global.sWFID.Set(V.Local.iWF)
+	''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	
+	'Updating the assigned user for the WF's 2nd line to be the SP
+	F.Intrinsic.String.Build("update ATG_WF_LINES set USER_GROUP = '{0}' where WF_ID = '{1}' and LINE = '2';", V.Caller.User, V.Global.sWFID, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	'Setting variables
+	V.Local.sIntructions.Set(V.Screen.FormShipping!txtSpecialInstructions.Text)
+	f.Intrinsic.String.Replace(V.Local.sIntructions, "'", "''", V.Local.sIntructions)
+	F.Intrinsic.String.Format(V.Ambient.Now, "YYYY-MM-DD HH:NN:SS", V.Local.sDateTime)
+	f.Intrinsic.String.Replace(V.Global.sName, "'", "''", V.Global.sName)
+	
+	'Saving shipping quote's requirements to custom table. 25 FIELDS
+	F.Intrinsic.String.Build("insert into GCG_6909_SHIPPING (QUOTE_NO, CUSTOMER_NAME, CHECKBOX_1, CHECKBOX_2, CHECKBOX_3, CHECKBOX_4, CHECKBOX_5, CHECKBOX_6, CHECKBOX_7, CHECKBOX_8, CHECKBOX_9, CHECKBOX_10, CHECKBOX_11, CHECKBOX_12, CHECKBOX_13, CHECKBOX_14, CHECKBOX_15, CHECKBOX_16, CHECKBOX_17, CHECKBOX_18, CARRIER, SHIP_VIA, INSTRUCTIONS, WF_ID, CHK3_CONTACTNAME, CHK3_CONTACTNUMBER, USER_ID, DATETIME_STAMP, FREIGHT) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}','');", V.Global.sQuoteNumber,  V.Global.sName, V.Screen.FormShipping!chk1.Value, V.Screen.FormShipping!chk2.Value, V.Screen.FormShipping!chk3.Value, V.Screen.FormShipping!chk4.Value, V.Screen.FormShipping!chk5.Value, V.Screen.FormShipping!chk6.Value, V.Screen.FormShipping!chk7.Value, V.Screen.FormShipping!chk8.Value, V.Screen.FormShipping!chk9.Value, V.Screen.FormShipping!chk10.Value, V.Screen.FormShipping!chk11.Value, V.Screen.FormShipping!chk12.Value, V.Screen.FormShipping!chk13.Value, V.Screen.FormShipping!chk14.Value, V.Screen.FormShipping!chk15.Value, V.Screen.FormShipping!chk16.Value, V.Screen.FormShipping!chk17.Value, V.Screen.FormShipping!chk18.Value, V.Screen.FormShipping!txtCarrier.Text, V.Screen.FormShipping!txtShipVia.Text, V.Local.sIntructions.RTrim, V.Local.iWF, v.Screen.FormShipping!txtContactName.Text, v.Screen.FormShipping!txtContactNumber.Text, V.Caller.User, V.Local.sDateTime, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	
+	'Sending email to Shipping, displaying msgbox and unload.
+	F.Intrinsic.Control.CallSub("SendEmail", "WF_Title", V.Local.sTitle)
+	F.Intrinsic.UI.Msgbox("The selected shipping requirements have been saved and sent to Shipping.", V.Global.sARCID)
+	F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+	
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveSettings_Click.End
+
+Program.Sub.SendEmail.Start
+'This subroutine sends emails to the WF assigned users/groups.
+'V.Args.WF_Title
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	V.Local.iCounter.Declare(Long)
+	V.Local.sAssigned.Declare(String)
+	V.Local.sSubject.Declare(String)
+	V.Local.sBody.Declare(String)
+	V.Local.iUserID.Declare(Long)
+	V.Local.sSender.Declare(String)
+	V.Local.sSenderEmail.Declare(String)
+	V.Local.sSenderName.Declare(String)
+	V.Local.sRecipients.Declare(String)
+	V.Local.sRecipientEmail.Declare(String)
+	V.Local.sRecipientName.Declare(String)
+	V.Local.sGroupUsers.Declare(String)
+	V.Local.sTemp.Declare(String)
+	V.Local.sOptions.Declare(String)
+	
+	'Creating dt based on WF line data
+	F.Intrinsic.String.Build("select * from ATG_WF_LINES where WF_ID = '{0}' and LINE = '1';", V.Global.sWFID, V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtWFLines", "Con", V.Local.sSQL, True)
+	
+	'SETTING QUEUE EMAIL PARAMETERS
+	'Getting User ID
+	F.Global.Security.GetUserID(V.Caller.User, V.Caller.CompanyCode, V.Local.iUserID)
+	
+	'Setting subject
+	f.Intrinsic.String.Build("{0} for {1}", V.DataTable.dtWFLines(0).DESCRIPTION!FieldValTrim, v.Args.WF_Title, V.Local.sSubject)
+	
+	'''Building sender parameter
+	'Get email address of GS User
+	F.Global.Security.GetUserEmail(V.Caller.User, V.Local.sSenderEmail)
+	
+	'Alert and end script if no email found for GS User
+	F.Intrinsic.control.If(V.Local.sSenderEmail,=,"")
+		F.Intrinsic.UI.Msgbox("Error in email procedure. The GS User does not have an email address associated in User Security Maintenance.")
+		F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+	F.Intrinsic.Control.EndIf
+	
+	'Getting full name of GS User
+	F.Global.Security.GetFullName(V.Caller.User, V.Caller.CompanyCode, V.Local.sSenderName)
+	
+	'Setting Sender Info for Queue Message
+	f.Intrinsic.String.Concat(V.Local.sSenderEmail,"*!*", V.Local.sSenderName, V.Local.sSender)
+	'''
+	
+	'''Building recipients parameter, The recipients are delimited with a @!@, while the recipient's name and recipient's email address are delimited with a *!*.
+	'Setting variable to assigned user/group
+	V.Local.sAssigned.Set(V.DataTable.dtWFLines(0).USER_GROUP!FieldValTrim)
+	
+	'Validating if it is an specific user or a group.
+	F.Intrinsic.Control.If(V.DataTable.dtWFLines(0).USR_GRP_FLAG!FieldVal, =, False)
+	
+		'Retrieving all group members
+		f.Global.Security.GetGroupMembers(V.Local.sAssigned, V.Caller.CompanyCode, V.Local.sGroupUsers)
+		F.Intrinsic.String.Split(V.Local.sGroupUsers, "*!*", V.Local.sGroupUsers)
+		
+		F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sGroupUsers.UBound, 1)
+
+			'Retrieving user's email and name
+			F.Global.Security.GetUserEmail(V.Local.sGroupUsers(V.Local.iCounter), V.Local.sRecipientEmail)
+			F.Global.Security.GetFullName(V.Local.sGroupUsers(V.Local.iCounter), V.Caller.CompanyCode, V.Local.sRecipientName)
+			
+			'Building recipients parameter
+			F.Intrinsic.String.Build("{0}*!*{1}", V.Local.sRecipientName, V.Local.sRecipientEmail, V.Local.sTemp)
+			V.Local.sRecipients.Append(V.Local.sTemp)
+			
+			f.Intrinsic.Control.If(V.Local.iCounter, <>, V.Local.sGroupUsers.UBound)
+				V.Local.sRecipients.Append("@!@")
+			f.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.Next(V.Local.iCounter)
+	
+	F.Intrinsic.Control.Else
+		
+		'Retrieving single user's email and name
+		F.Global.Security.GetUserEmail(V.Local.sAssigned, V.Local.sRecipientEmail)
+		F.Global.Security.GetFullName(V.Local.sAssigned, V.Caller.CompanyCode, V.Local.sRecipientName)
+		
+		'Building recipients parameter
+		F.Intrinsic.String.Build("{0}*!*{1}", V.Local.sRecipientName, V.Local.sRecipientEmail, V.Local.sRecipients)
+
+	F.Intrinsic.Control.EndIf
+	
+	'Building body
+	'Customer Name and Ship To Zip Code required
+	f.Intrinsic.String.Build("Customer Name: '{0}', Ship To ZIP Code: '{1}'", V.Global.sName, V.Global.sShipToZIP, v.Local.sBody)
+	
+	'Creating dv to get selected options only and saving those values into a string
+	F.Data.DataView.Create("dtOptions", "dvOptions", 22, "[VALUE] = 'True'", "")
+	f.Data.DataView.ToString("dtOptions", "dvOptions", "OPTION_NAME", "", ", ", V.Local.sOptions)
+	
+	'Adding shipping requirements to body
+	f.Intrinsic.String.Build("{0}{1}{1}Shipping Quote Requirements:", v.Local.sBody, v.Ambient.NewLine, v.Local.sBody)
+	f.Intrinsic.String.Build("{0}{1}{2}", v.Local.sBody, v.Ambient.NewLine, V.Local.sOptions, v.Local.sBody)
+	f.Intrinsic.String.Build("{0}{1}Carrier: '{2}', Ship Via: '{3}'", v.Local.sBody, v.Ambient.NewLine, V.Screen.FormShipping!txtCarrier.Text, V.Screen.FormShipping!txtShipVia.Text, v.Local.sBody)
+	
+	'If Special Instructions txtbox is blank, then add a N/A to email body. Use txtbox's text otherwise.
+	F.Intrinsic.Control.If(V.Screen.FormShipping!txtSpecialInstructions.Text, <>, "")
+		f.Intrinsic.String.Build("{0}{1}Special Instructions: '{2}'", v.Local.sBody, v.Ambient.NewLine, V.Screen.FormShipping!txtSpecialInstructions.Text, v.Local.sBody)
+	F.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0}{1}Special Instructions: 'N/A'", v.Local.sBody, v.Ambient.NewLine, v.Local.sBody)
+	F.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("{0}{1}{1}{2}", v.Local.sBody, v.Ambient.NewLine,"*Automatically generated email notification*", v.Local.sBody)
+	''''''''''''''''''''''''''''''''''''''''''''
+
+	'Queueing email which be later sent by Courier
+	F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUserID, "GCG_6909_FreightQuote_SP",V.Local.sSubject,V.Local.sSender, V.Local.sRecipients, V.Local.sBody,5,"",False,"","","","","","","", "", False, "")
+	
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.SendEmail.End
+
+Program.Sub.CatchError.Start
+'To display the error
+F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.SubroutineCalledFrom, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Global.sError) 
+F.Intrinsic.UI.Msgbox(V.Global.sError, V.Global.sARCID)
+F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+Program.Sub.CatchError.End
+
+Program.Sub.CreateOptionsDt.Start
+'This subroutine creates a new datatable to store all 18 checkboxes names and values
+
+F.Intrinsic.Control.Try
+
+	'Manually creating dt to be filled in later
+	F.Data.DataTable.Create("dtOptions", True)
+	F.Data.DataTable.AddColumn("dtOptions", "OPTION_NAME", "String")
+	F.Data.DataTable.AddColumn("dtOptions", "OPTION_ID", "String")
+	F.Data.DataTable.AddColumn("dtOptions", "VALUE", "Boolean")
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk1.Caption, "OPTION_ID", "chk1", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk2.Caption, "OPTION_ID", "chk2", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk3.Caption, "OPTION_ID", "chk3", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk4.Caption, "OPTION_ID", "chk4", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk5.Caption, "OPTION_ID", "chk5", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk6.Caption, "OPTION_ID", "chk6", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk7.Caption, "OPTION_ID", "chk7", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk8.Caption, "OPTION_ID", "chk8", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk9.Caption, "OPTION_ID", "chk9", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk10.Caption, "OPTION_ID", "chk10", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk11.Caption, "OPTION_ID", "chk11", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk12.Caption, "OPTION_ID", "chk12", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk13.Caption, "OPTION_ID", "chk13", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk14.Caption, "OPTION_ID", "chk14", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk15.Caption, "OPTION_ID", "chk15", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk16.Caption, "OPTION_ID", "chk16", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk17.Caption, "OPTION_ID", "chk17", "VALUE", False)
+	F.Data.DataTable.AddRow("dtOptions", "OPTION_NAME", V.Screen.FormShipping!chk18.Caption, "OPTION_ID", "chk18", "VALUE", False)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.CreateOptionsDt.End
+
+Program.Sub.chk1_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 0, "VALUE", V.Screen.FormShipping!chk1.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk1_Change.End
+
+Program.Sub.chk2_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 1, "VALUE", V.Screen.FormShipping!chk2.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk2_Change.End
+
+Program.Sub.chk3_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 2, "VALUE", V.Screen.FormShipping!chk3.Value)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.FormShipping!chk3.Value, =, 1)
+
+	GUI.FormShipping.lbl6.Visible(True)
+	GUI.FormShipping.lbl7.Visible(True)
+	GUI.FormShipping.txtContactName.Visible(True)
+	GUI.FormShipping.txtContactNumber.Visible(True)
+
+F.Intrinsic.Control.Else
+	
+	GUI.FormShipping.lbl6.Visible(False)
+	GUI.FormShipping.lbl7.Visible(False)
+	GUI.FormShipping.txtContactName.Visible(False)
+	GUI.FormShipping.txtContactNumber.Visible(False)
+
+F.Intrinsic.Control.EndIf
+Program.Sub.chk3_Change.End
+
+Program.Sub.chk4_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 3, "VALUE", V.Screen.FormShipping!chk4.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk4_Change.End
+
+Program.Sub.chk5_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 4, "VALUE", V.Screen.FormShipping!chk5.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk5_Change.End
+
+Program.Sub.chk6_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 5, "VALUE", V.Screen.FormShipping!chk6.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk6_Change.End
+
+Program.Sub.chk7_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 6, "VALUE", V.Screen.FormShipping!chk7.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk7_Change.End
+
+Program.Sub.chk8_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 7, "VALUE", V.Screen.FormShipping!chk8.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk8_Change.End
+
+Program.Sub.chk9_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 8, "VALUE", V.Screen.FormShipping!chk9.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk9_Change.End
+
+Program.Sub.chk10_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 9, "VALUE", V.Screen.FormShipping!chk10.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk10_Change.End
+
+Program.Sub.chk11_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 10, "VALUE", V.Screen.FormShipping!chk11.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk11_Change.End
+
+Program.Sub.chk12_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 11, "VALUE", V.Screen.FormShipping!chk12.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk12_Change.End
+
+Program.Sub.chk13_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 12, "VALUE", V.Screen.FormShipping!chk13.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk13_Change.End
+
+Program.Sub.chk14_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 13, "VALUE", V.Screen.FormShipping!chk14.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk14_Change.End
+
+Program.Sub.chk15_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 14, "VALUE", V.Screen.FormShipping!chk15.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk15_Change.End
+
+Program.Sub.chk16_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 15, "VALUE", V.Screen.FormShipping!chk16.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk16_Change.End
+
+Program.Sub.chk17_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 16, "VALUE", V.Screen.FormShipping!chk17.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk17_Change.End
+
+Program.Sub.chk18_Change.Start
+'Updates value to dt everytime option is checked/unchecked.
+F.Intrinsic.Control.If(V.DataTable.dtOptions.Exists)
+	F.Data.DataTable.SetValue("dtOptions", 17, "VALUE", V.Screen.FormShipping!chk18.Value)
+F.Intrinsic.Control.EndIf
+Program.Sub.chk18_Change.End
+
+Program.Sub.cmdBrowser_Click.Start
+'This subroutine presents the user from SHIPPING with a dialog form to select the file they want to process
+
+F.Intrinsic.Control.Try
+
+	V.Local.sFilePath.Declare(String)
+	
+	F.Intrinsic.UI.ShowOpenFileDialog("", "", "", V.Local.sFilePath)
+	F.Intrinsic.Control.If(V.Local.sFilePath.IsNotCancel)
+		
+		'Enabling save button since user has selected a file and displaying selected file's path in txtbox
+		GUI.FormShipping.cmdCreateDocLink.Enabled(True)
+		GUI.FormShipping.txtFilePath.Text(V.Local.sFilePath)
+		
+	F.Intrinsic.Control.Else
+		
+		'Displaying error message since no file was selected
+		F.Intrinsic.UI.Msgbox("A file must be selected in order to send email.", "ERROR")
+		
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdBrowser_Click.End
+
+Program.Sub.cmdSavePDF_Click.Start
+'This subroutine sends an email to the associated salesperson, so he/she receives the Freight Quote PDF file.
+
+F.Intrinsic.Control.Try
+
+	V.Local.sSQL.Declare(String)
+	V.Local.iCounter.Declare(Long)
+	V.Local.sAssigned.Declare(String)
+	V.Local.sSubject.Declare(String)
+	V.Local.sBody.Declare(String)
+	V.Local.iUserID.Declare(Long)
+	V.Local.sSender.Declare(String)
+	V.Local.sSenderEmail.Declare(String)
+	V.Local.sSenderName.Declare(String)
+	V.Local.sRecipients.Declare(String)
+	V.Local.sRecipientEmail.Declare(String)
+	V.Local.sRecipientName.Declare(String)
+	V.Local.sGroupUsers.Declare(String)
+	V.Local.sTemp.Declare(String)
+	V.Local.sOptions.Declare(String)
+	V.Local.sWFData.Declare(String)
+	V.Local.sFilePath.Declare(String)
+	V.Local.sAttachment.Declare(String)
+	V.Local.sFinalPath.Declare(String)
+	V.Local.fFreightCost.Declare(Float)
+	V.Local.fFreightAmount.Declare(Float)
+	V.Local.fFreightMarkup.Declare(Float)
+	V.Local.sDateTime.Declare(String)
+	
+	'Disabling button
+	GUI.FormShipping.cmdSavePDF.Enabled(False)
+	
+	'Updating WF task to flag it as completed
+	F.Intrinsic.String.Format(V.Ambient.Now, "YYYY-MM-DD HH:NN:SS", V.Local.sDateTime)
+	F.Intrinsic.String.Build("update ATG_WF_LINES set PERC_COMPLETION = '100', COMPLETION_DATE = '{0}', COMPLETED_BY = '{1}' where WF_ID = '{2}' and LINE = '1';", V.Local.sDateTime, V.Caller.User, V.DataTable.dtLoadOptions(0).WF_ID!FieldVal, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+			
+	'Creating dt based on WF line data
+	F.Intrinsic.String.Build("select WH.TITLE, CT.USER_ID from ATG_WF_HEADER WH LEFT JOIN GCG_6909_SHIPPING CT on WH.WF_ID = CT.WF_ID where WH.WF_ID = '{0}';", V.DataTable.dtLoadOptions(0).WF_ID!FieldVal, V.Local.sSQL)
+	F.ODBC.Connection!Con.ExecuteAndReturn(V.Local.sSQL, V.Local.sWFData)
+	F.Intrinsic.String.Split(V.Local.sWFData, "*!*", V.Local.sWFData)
+	
+	'Setting Freight Cost
+	V.Local.fFreightCost.Set(V.Screen.FormShipping!txtFreight.Text)
+	
+	'Reading value from GS Registry to add freight markup percentage set in maintenance program
+	F.Global.Registry.ReadValue("SUPERVSR",V.Caller.CompanyCode,"GCG_6909",6909,1001,5,"",V.Local.fFreightMarkup)
+	F.Intrinsic.Math.Div(V.Local.fFreightMarkup, 100, V.Local.fFreightMarkup)
+	F.Intrinsic.Math.Add(V.Local.fFreightMarkup, 1, V.Local.fFreightMarkup)
+	f.Intrinsic.Math.Mult(V.Local.fFreightCost, V.Local.fFreightMarkup, V.Local.fFreightAmount)
+	
+	'updating value to the quote itself.
+	F.Intrinsic.String.Build("update QUOTE_LINES set PRICE = '{1}', COST = '{2}', EXTENSION = '{1}', EXTENSION_QUOTE = '{1}', DISCOUNT_PRICE = '{1}', PRICE_QUOTE = '{1}', PRICE_DISC_ORD = '{1}' where QUOTE_NO = '{0}' and RECORD_NO = '8000';", V.Global.sQuoteNumber, V.Local.fFreightAmount, V.Local.fFreightCost, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)
+	F.Intrinsic.String.Build("update GCG_6909_SHIPPING set FREIGHT = '{1}' where QUOTE_NO = '{0}';", V.Global.sQuoteNumber, V.Local.fFreightAmount, V.Local.sSQL)
+	F.ODBC.Connection!Con.Execute(V.Local.sSQL)	
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	
+	'SETTING QUEUE EMAIL PARAMETERS
+	'Getting User ID
+	F.Global.Security.GetUserID(V.Caller.User, V.Caller.CompanyCode, V.Local.iUserID)
+	
+	'Setting subject
+	f.Intrinsic.String.Build("{0}, {1} - Freight Ready", V.DataTable.dtLoadOptions(0).CUSTOMER_NAME!FieldValTrim, V.Local.sWFData(0), V.Local.sSubject)
+	
+	'''Building sender parameter
+	'Get email address of GS User
+	F.Global.Security.GetUserEmail(V.Caller.User, V.Local.sSenderEmail)
+	
+	'Alert and end script if no email found for GS User
+	F.Intrinsic.control.If(V.Local.sSenderEmail,=,"")
+		F.Intrinsic.UI.Msgbox("Error in email procedure. The GS User does not have an email address associated in User Security Maintenance.")
+		F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+	F.Intrinsic.Control.EndIf
+	
+	'Getting full name of GS User
+	F.Global.Security.GetFullName(V.Caller.User, V.Caller.CompanyCode, V.Local.sSenderName)
+	
+	'Setting Sender Info for Queue Message
+	f.Intrinsic.String.Concat(V.Local.sSenderEmail,"*!*", V.Local.sSenderName, V.Local.sSender)
+	'''
+	
+	'''Building recipients parameter
+	'Setting variable to assigned user. ONLY SINGLE USERS HERE, NO GROUPS.
+	V.Local.sAssigned.Set(V.Local.sWFData(1))
+
+	'Retrieving single user's email and name
+	F.Global.Security.GetUserEmail(V.Local.sAssigned, V.Local.sRecipientEmail)
+	F.Global.Security.GetFullName(V.Local.sAssigned, V.Caller.CompanyCode, V.Local.sRecipientName)
+	
+	'Building recipients parameter
+	F.Intrinsic.String.Build("{0}*!*{1}", V.Local.sRecipientName, V.Local.sRecipientEmail, V.Local.sRecipients)
+	
+	'Building body
+	f.Intrinsic.String.Build("Your Freight Quote is ready for your review. Freight Amount = {0}. Please send the quote to the customer to complete process.", V.Local.fFreightAmount, v.Local.sBody)
+	f.Intrinsic.String.Build("{0}{1}{1}{2}", v.Local.sBody, v.Ambient.NewLine,"*Automatically generated email notification*", v.Local.sBody)
+	''''''''''''''''''''''''''''''''''''''''''''
+	
+	'Building Attachment parameter
+	V.Local.sFilePath.Set(V.Screen.FormShipping!txtFilePath.Text)
+	F.Intrinsic.File.GetPathFromFQN(v.Local.sFilePath, V.Local.sFinalPath)
+	F.Intrinsic.File.GetFileNameFromFQN(v.Local.sFilePath, V.Local.sAttachment)
+	F.Intrinsic.String.Build("{0}*!*{1}\", V.Local.sAttachment, V.Local.sFinalPath, V.Local.sFinalPath)
+	
+	'Queueing email which be later sent by Courier
+	F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUserID, "GCG_6909_FreightQuote_SH",V.Local.sSubject,V.Local.sSender, V.Local.sRecipients, V.Local.sBody,5,"",False,"","","","","","","", V.Local.sFinalPath, False, "")
+	
+	'Displaying msgbox and unload.
+	F.Intrinsic.UI.Msgbox("Your Freight Quote PDF file has been sent to the associated salesperson.", V.Global.sARCID)
+	F.Intrinsic.Control.CallSub("FormShipping_UnLoad")
+	
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSavePDF_Click.End
+
+Program.Sub.FormShipping_UnLoad.Start
+'Closes the connection if it is open
+f.Intrinsic.Control.If(v.ODBC.con.exists,=,"1") 	
+    f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.EndIf
+
+'Closing screen
+GUI.FormShipping..Visible(False)
+
+'Ending program
+F.Intrinsic.Control.End
+Program.Sub.FormShipping_UnLoad.End
+
+Program.Sub.UnhideControls.Start
+'This subroutine unhides and formats a checkbox and a label in the Quote Header screen
+
+F.Intrinsic.Control.Try
+	
+	'Unhiding controls
+	F.Intrinsic.UI.ChangeCallerProperty(V.Passed.GAB-CHK-1, "HIDE", 0) 'True is 1, False 0
+	F.Intrinsic.UI.ChangeCallerProperty(V.Passed.GAB-CHK-1, "LOCK", 0)
+	F.Intrinsic.UI.ChangeCallerProperty(V.Passed.GAB-LBL-1, "HIDE", 0)
+	
+	'Setting up checkbox's message
+	V.Passed.GAB-LBL-1.Set("Regenerate Freight Quote") 
+
+	'Setting up the position for each control
+	'PT is vertical position, PL is horizontal position
+	F.Intrinsic.Variable.SetProperty("GAB-LBL-1", "PT", 530)
+	F.Intrinsic.Variable.SetProperty("GAB-LBL-1", "PL", 425)
+	
+	F.Intrinsic.Variable.SetProperty("GAB-CHK-1", "PT", 530) 
+	F.Intrinsic.Variable.SetProperty("GAB-CHK-1", "PL", 400)
+
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.UnhideControls.End
+
+Program.Sub.cmdCreateDocLink_Click.Start
+'This subroutine links and uploads the Freight Quote PDF file to the Quote number.
+
+F.Intrinsic.Control.Try
+
+	V.Local.iLinkID.Declare(Long)
+	V.Local.sDescription.Declare(String)
+	V.Local.sFilePath.Declare(String)
+	V.Local.sFileName.Declare(String)
+	V.Local.sPath.Declare(String)
+	V.Local.sSavePath.Declare(String)
+	V.Local.iDCGroupID.Declare(Long)
+	
+	'Disabling button
+	GUI.FormShipping.cmdCreateDocLink.Enabled(False)
+	
+	'Getting Freight Quote PDF filepath
+	V.Local.sFilePath.Set(V.Screen.FormShipping!txtFilePath.Text)
+	
+	'Getting filename and path
+	f.Intrinsic.File.GetPathFromFQN(V.Local.sFilePath, V.Local.sPath)
+	f.Intrinsic.File.GetFileNameFromFQN(V.Local.sFilePath, V.Local.sFileName)
+	
+	'Creating new link ID for file
+	F.Global.DocumentControl.CreateReference(V.Global.sQuoteNumber,50,V.Local.iLinkID)
+	
+	'Copying file to PLUGINS\HTM folder
+	f.Intrinsic.String.Build("{0}\HTM\{1}",V.Caller.PluginsDir, V.Local.sFileName, v.local.sSavePath)
+	f.Intrinsic.File.CopyFile(V.Local.sFilePath, v.local.sSavePath)
+	
+	'Adding document process
+	f.Intrinsic.String.Build("Freight Quote {0}",v.Global.sQuoteNumber,v.local.sDescription)
+	
+	'Retrieving DC Group's ID based on its name
+	F.ODBC.Connection!Con.ExecuteAndReturn("select GRP_ID from ATG_DOC_GRP where GRP_NAME = 'Freight Quote';", V.Local.iDCGroupID)
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF, =, False)
+		F.Global.DocumentControl.AddDocument(V.Local.iLinkID,v.Local.sSavePath,v.Local.sDescription,V.Local.iDCGroupID,"")
+	F.Intrinsic.Control.EndIf
+	'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	
+	'Enabling Save button and displaying msgbox
+	GUI.FormShipping.cmdSavePDF.Enabled(True)
+	F.Intrinsic.UI.Msgbox("Freight Quote PDF file has been linked to quote number.", V.Global.sARCID)
+	
+F.Intrinsic.Control.Catch
+	
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdCreateDocLink_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8328.25015$}$1
+${$6$}$apadilla$}$20230329142107060$}$Lag9STqBJOmNXSbd5+msRcBWPGz0aFqSq3jmzPZEOBZxVU9XA5ZGGW7VWbg5JQN0JLP1l/tTLx3XX04/VH2w2A==
+Program.Sub.Comments.End
