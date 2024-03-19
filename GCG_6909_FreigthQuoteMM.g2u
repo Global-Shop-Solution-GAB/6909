@@ -1,0 +1,131 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.Form_MM..Create(BaseForm)
+Gui.Form_MM..Caption("ARC 6909 - Freight MM")
+Gui.Form_MM..Size(349,100)
+Gui.Form_MM..MinX(0)
+Gui.Form_MM..MinY(0)
+Gui.Form_MM..Position(0,0)
+Gui.Form_MM..AlwaysOnTop(False)
+Gui.Form_MM..FontName("Tahoma")
+Gui.Form_MM..FontSize(8.25)
+Gui.Form_MM..ControlBox(True)
+Gui.Form_MM..MaxButton(True)
+Gui.Form_MM..MinButton(True)
+Gui.Form_MM..MousePointer(0)
+Gui.Form_MM..Moveable(True)
+Gui.Form_MM..Sizeable(True)
+Gui.Form_MM..ShowInTaskBar(True)
+Gui.Form_MM..TitleBar(True)
+Gui.Form_MM..AccentColor(1)
+Gui.Form_MM..Event(UnLoad,Form_MM_UnLoad)
+Gui.Form_MM.txt_FreightMarkup.Create(TextBox,"",True,88,20,0,141,24,True,0,"Tahoma",8.25,,1)
+Gui.Form_MM.txt_FreightMarkup.NumericOnly(1)
+Gui.Form_MM.lbl4.Create(Label,"Freight Markup %",True,102,13,0,27,28,True,0,"Tahoma",8.5,,0,0)
+Gui.Form_MM.lbl4.BorderStyle(0)
+Gui.Form_MM.lbl4.FontStyle(True,False,False,False,False)
+Gui.Form_MM.cmd_SaveExport.Create(Button)
+Gui.Form_MM.cmd_SaveExport.Enabled(True)
+Gui.Form_MM.cmd_SaveExport.Visible(True)
+Gui.Form_MM.cmd_SaveExport.Zorder(0)
+Gui.Form_MM.cmd_SaveExport.Size(48,23)
+Gui.Form_MM.cmd_SaveExport.Position(259,22)
+Gui.Form_MM.cmd_SaveExport.Caption("Save")
+Gui.Form_MM.cmd_SaveExport.FontName("Tahoma")
+Gui.Form_MM.cmd_SaveExport.FontSize(8.25)
+Gui.Form_MM.cmd_SaveExport.Event(Click,cmd_SaveExport_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.sError.Declare(String)
+V.Global.sARCID.Declare(String, "ARC 6909")
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Author: Arturo Almaguer
+'Date: 2/14/23
+'Customer: Air Quality Engineering, quote: 11943
+'This program is a maintenance menu for ARC 6909 Freight Quote deliverable
+'This script is launched off a new custom menu item under Estimating/Routing & Quote Management > Administration > Freight Quote Maintenance [6909] 
+
+F.Intrinsic.Control.Try
+
+	Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+	
+	'Loading value and displaying screen
+	F.Intrinsic.Control.CallSub(LoadData)
+	GUI.Form_MM..Show
+
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.Form_MM_UnLoad.Start
+'Making form invisible
+GUI.Form_MM..Visible(False)
+
+'Closes the connection if it is open
+f.Intrinsic.Control.If(v.ODBC.con.exists,=,"1") 	
+    f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.EndIf
+
+'Ending program
+F.Intrinsic.Control.End
+Program.Sub.Form_MM_UnLoad.End
+
+Program.Sub.LoadData.Start
+'This subroutine reads value stored in GS Registry.
+
+F.Intrinsic.Control.Try
+	
+	v.Local.sFreightMarkup.Declare(String)
+	
+	'Reading value from GS Registry.
+	F.Global.Registry.ReadValue("SUPERVSR",V.Caller.CompanyCode,"GCG_6909",6909,1001,5,"",V.Local.sFreightMarkup)
+	
+	F.Intrinsic.Control.If(V.Local.sFreightMarkup, <>, "")
+		'Setting value to be displayed in textbox
+		gui.Form_MM.txt_FreightMarkup.Text(V.Local.sFreightMarkup)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadData.End
+
+Program.Sub.cmd_SaveExport_Click.Start
+'This subroutine save new export path to GS Registry
+
+F.Intrinsic.Control.Try
+	
+	v.Local.sFreightMarkup.Declare(String)
+	
+	v.Local.sFreightMarkup.Set(v.Screen.Form_MM!txt_FreightMarkup.Text)
+
+	'Writing value to GS Registry and displaying msg box
+	F.Global.Registry.AddValue("SUPERVSR", V.Caller.CompanyCode,"GCG_6909",6909,1001, False, v.Local.sFreightMarkup, False, 0,-999.0,1/1/1980,12:00:00 AM, "")
+	F.Intrinsic.UI.Msgbox("Freight markup percentage has been saved.", "Success")
+
+F.Intrinsic.Control.Catch
+
+	F.Intrinsic.Control.CallSub(CatchError)
+	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmd_SaveExport_Click.End
+
+Program.Sub.CatchError.Start
+'Displaying error msg
+F.Intrinsic.String.Build("Subroutine:{1}{0}Error Occurred {2} with description {3}", V.Ambient.Newline, V.Ambient.SubroutineCalledFrom, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Global.sError) 
+F.Intrinsic.UI.Msgbox(V.Global.sError, V.Global.sARCID)
+F.Intrinsic.Control.CallSub("Form_MM_UnLoad")
+Program.Sub.CatchError.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8328.25015$}$1
+${$6$}$apadilla$}$20230214160544640$}$Lag9STqBJOmNXSbd5+msRcBWPGz0aFqSq3jmzPZEOBZx+vlKBVxY7P1Nm+mRyAakG+UXuvCEjinc853Mvf2t0g==
+Program.Sub.Comments.End
